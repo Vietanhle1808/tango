@@ -1,1 +1,15 @@
-body.ie-browser {}
+body.ie-browser {
+  &.disable-scroll {
+    .body-wrapper {
+      height: auto;
+    }
+  }
+  .hero-banner .hero-banner-item .banner-link-box {
+    max-width: 584px;
+  }
+  @media (min-width: 992px) {
+    .section-result .section-result-body .section-result-item {
+      flex: 0 0 30.33333%;
+    }
+  }
+}

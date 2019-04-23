@@ -1,0 +1,44 @@
+include ./_card-image
+
+//----------------------------------------------------------------
+  Card Image
+  - src: link to image
+  - title: title of card
+  - width: width of image (default = null ~ 0rem)
+  - height: height of image (default = null ~ 0rem)
+  Class of width & height must be define before in css with structure: .w-#{width}, .h-#{height}
+  ----------------------------------------------------------------
+
+mixin card-image-title(src, title, width, height)
+  - var classWidth = width ? "w-" + width : "";
+  - var classHeight = height ? "h-" + height : "";
+  - var className = " " + classWidth + " " + classHeight;
+
+  div(class="card-image-title" + className)&attributes(attributes)
+    a(href="#" title=title)
+      +card-image(src, width, height)
+      if title
+        .card-footer
+          h4.card-title= title
+
+
+//----------------------------------------------------------------
+  Card Image
+  - src: link to image
+  - title: title of card
+  - width: width of image (default = null ~ 0rem)
+  - height: height of image (default = null ~ 0rem)
+  Class of width & height must be define before in css with structure: .w-#{width}, .h-#{height}
+  - position: left/right (default: left)
+  ----------------------------------------------------------------
+mixin card-image-distinct(src, title, width, height, position)
+  - var classWidth = width ? "w-" + width : "";
+  - var classHeight = height ? "h-" + height : "";
+  - var className = " " + classWidth + " " + classHeight;
+
+  div(class="card-image-distinct " + position + className)
+    a(href="#" title=title)
+      +card-image(src, width, height)
+      if title
+        .card-footer
+          h4.card-title= title

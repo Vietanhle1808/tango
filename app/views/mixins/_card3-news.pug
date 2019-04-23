@@ -1,0 +1,34 @@
+include ./_card-image
+
+//- By default, all link is # so we don't need to import href
+  - img: link to image
+  - title
+  - description
+  - cta: Title of button
+  - socials: true/false to turn on/off socials
+
+mixin card3-news(img, title, description, cta, socials)
+  - socials = socials || true;
+
+  article.card3.card3-news&attributes(attributes)
+    .card3-thumb
+      a(href="#" title=title)
+        +card-image(img)
+    .card3-content
+      if title
+        .card3-title
+          a(href="#", title=title, class="link")= title
+      if description
+        p.card3-description= description
+      if cta
+        a(class="button button-flat-primary", href="#", title=cta)= cta
+          span.ic-arrow
+      if socials
+        .card3-socials
+          .list-socials.gray
+            a(href="http://www.facebook.com/share.php?u=vicostone.projectuat.com" title="Facebook")
+              span.ic-facebook
+            a(href="https://twitter.com/intent/tweet?text=Vicostone&url=http%3A%2F%2Fvicostone.projectuat.com" title="twitter")
+              span.ic-twitter
+            //- a(href="#" title="instagram")
+            //-   span.ic-instagram

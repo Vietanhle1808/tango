@@ -1,0 +1,108 @@
+include ./_card-image
+
+//----------------------------------------------------------------
+  Card2 product
+  - title
+  - description
+  - img1: link to image 1
+  - img2: link to image 2 (appare when hover)
+  - src: link to ... when click image
+  - label: ex: new, latest (will add class "light" or "dark" to display for each image)
+  - cta: name of cta
+  - ctaUrl: link to ... when click cta
+  - id: id of input to like
+  ----------------------------------------------------------------
+
+mixin card2-product(title, description, img1, img2, src, label, cta, ctaUrl, id, productId, productName, productImage, productUrl, productPrice, productTax, productShipping)
+  article.card2.card2-product&attributes(attributes)
+    .card2-header
+      if label
+        label.card2-product-label #{label}
+      a.card2-product-order(href=src title="title")
+        p Order Sample
+        span.ic-add-fill
+      a.add-product-to-card(href=src title=title)
+        .card2-product-front
+          +card-image(img1)
+        .card2-product-overlay
+          +card-image(img2)
+    .card2-body
+      h4.card2-title #{title}
+      //- .card2-like
+      //-   .like.add-to-fav
+      //-     input(type="checkbox" id=id)
+      //-     label(for=id)
+      //-       span.ic-heart-outline
+      //-       span.ic-heart-fill
+      p.card2-description #{description}
+    .card2-footer
+      a(class="button button-underline" href=ctaUrl title=cta) #{cta}
+    .product-details-info
+      .product-id-data #{productId}
+      .product-name-data #{productName}
+      .product-image-data #{productImage}
+      .product-url #{productUrl}
+      .product-price-data
+        .product-price-number #{productPrice}
+        | USD
+      .product-tax-data
+        .product-tax-number #{productTax}
+        | %
+      .product-shipping-data
+        .product-shipping-number #{productShipping}
+        | USD
+
+//----------------------------------------------------------------
+  Card2 product 2 - To display as list in order
+  - img: link to image
+  - title: title of product
+  - id: id of product
+  - price
+  ----------------------------------------------------------------
+mixin card2-product-2(img, title, id, price)
+  - src = "product-detail.html"
+  article.card2.card2-product-2.no-footer&attributes(attributes)
+    .card2-thumb
+      a(href=src, title=title)
+        +card-image(img)
+    .card2-content
+      .card2-content-left
+        a(href=src, title=title)
+          h6.card2-product-heading !{title}
+        p.card2-product-id !{id}
+      .card2-content-right
+        p !{price}
+
+//----------------------------------------------------------------
+  Card2 product read more type
+  - title
+  - description
+  - img1: link to image 1
+  - img2: link to image 2 (appare when hover)
+  - src: link to ... when click image
+  - label: ex: new, latest (will add class "light" or "dark" to display for each image)
+  - cta: name of cta
+  - ctaUrl: link to ... when click cta
+  - id: id of input to like
+  ----------------------------------------------------------------
+
+mixin card2-product-readmore(title, description, img1, img2, src, label, cta, ctaUrl)
+  article.card2.card2-product&attributes(attributes)
+    .card2-header
+      if label
+        label.card2-product-label #{label}
+      a.card2-product-order(href=src title="title")
+        p Order Sample
+        span.ic-add-fill
+      a.add-product-to-card(href=src title=title)
+        .card2-product-front
+          +card-image(img1)
+        .card2-product-overlay
+          +card-image(img2)
+    .card2-body
+      h4.card2-title #{title}
+      .card2-description.read-more-box
+        p.read-more-content(data-max-text="172") #{description}
+        a.button-underline.read-more-link.is-off(href="javascript:void(0)" title="Read more") Read more
+    .card2-footer
+      a(class="button button-underline" href=ctaUrl title=cta) #{cta}

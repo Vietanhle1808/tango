@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
@@ -30,13 +29,11 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/**/*.scss') //Source all files ending with.scss in scss directory and its subdirectories
-    .pipe(sourcemaps.init())
     .pipe(plugins.plumber())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/css'))
 });
 
@@ -58,7 +55,7 @@ gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);
   gulp.watch('app/views/**/*.pug', ['pug']);
   gulp.watch('app/js/**/*.js', browserSync.reload);
-  // gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/css/*.css', browserSync.reload);
 });
 

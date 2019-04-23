@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+
+  .slider-socials {
+    position: absolute;
+    background: rgba($dark, .75);
+    padding: 1.2rem;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+
+  .card-image {
+    height: 100%;
+  }
+}
+
+.list-socials {
+  &.gray {
+    a {
+      color: $gray-dark;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+
+  a {
+    color: $light;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    transition: color .3s $cubic2;
+
+    [class^="ic-"] {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}

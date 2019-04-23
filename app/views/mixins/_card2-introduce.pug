@@ -1,0 +1,42 @@
+include ./_card-image.pug
+
+//----------------------------------------------------------------
+  Card2 Introduce
+  - image: link to image
+  - title: Card's title
+  - description: Card's description
+  - cta1, cta2: Name of CTA
+  - src1, src2: Link of cta
+  ----------------------------------------------------------------
+
+mixin card2-introduce(image, title, description, cta1, src1, cta2, src2)
+  //- - className = cta1 || cta2 ? "" : " no-footer"
+  - className = cta1 || cta2 ? "" : ""
+  article(class="card2 card2-introduce" + className)&attributes(attributes)
+    .card2-header
+      a(href="#" title=title)
+        +card-image(image)
+    .card2-body
+      a.card2-title(href="#" title=title) #{title}
+      if description
+        p.card2-description #{description}
+    if cta1 || cta2
+      .card2-footer
+        a(class="button button-underline" href=src1 title=cta1) #{cta1}
+        a(class="button button-underline" href=src2 title=cta2) #{cta2}
+
+mixin card2-introduce-2(image, title, description, cta)
+  article.card2.card2-introduce&attributes(attributes)
+    if image
+      .card2-header
+        a(href="#" title=title)
+          +card-image(image)
+    .card2-body
+      if title
+        a.card2-title(href="#" title=title) #{title}
+      if description
+        p.card2-description #{description}
+    if cta
+      .card2-footer
+        a(class="button button-flat-primary" href="#" title=cta) #{cta}
+          span.ic-arrow

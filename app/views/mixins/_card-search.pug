@@ -1,0 +1,25 @@
+include ./_form-search
+
+//----------------------------------------------------------------
+  Card search
+  ----------------------------------------------------------------
+
+mixin card-search(title, description, value, cta, src, placeholder, classBtnSpecify, mapUrl)
+  article.card.card-search&attributes(attributes)
+    if title
+      .card-header
+        h2.card-title #{title}
+    .card-body
+      if description
+        p.card-description #{description}
+      +form-search(value, placeholder)
+    if cta
+      .card-footer
+        if classBtnSpecify
+          a(class="button button-outline-light " + classBtnSpecify  href=src title=cta data-map-url=mapUrl)
+            | #{cta}
+            span.ic-send
+        else
+          a(class="button button-outline-light"  href=src title=cta data-map-url=mapUrl)
+            | #{cta}
+            span.ic-send

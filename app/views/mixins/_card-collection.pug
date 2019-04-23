@@ -1,0 +1,31 @@
+include ./_card-text.pug
+include ./_card-image.pug
+
+//----------------------------------------------------------------
+  Card collection 1: Background gray light
+  - img: link to image
+  - src: Link to page when hover image
+  - title1: Row 1 of title
+  - title2: Row 2 of title
+  - description: Description
+  - cta1, cta2: Name of cta
+  - src1, src2: Link of cta
+  ----------------------------------------------------------------
+
+mixin card-collection-gray(img, src, title1, title2, description, cta1, src1, cta2, src2)
+  section.card-collection.card-collection-gray(data-jarallax-element="60", data-speed="0.4")
+    .card-thumb
+      +card-image(img, 323)
+      a.button.button-icon(href=src title=title1 + " " + title2)
+        img(src="images/ic-add-white.svg" alt="add")
+    .card-detail
+      +card-text-2-2(title1, title2, description, cta1, src1, cta2, src2)
+
+mixin card-collection-white(img, src, title1, title2, description, cta1, src1)
+  section.card-collection.card-collection-white
+    .card-thumb
+      +card-image(img, 392)
+      a.button.button-icon(href=src)
+        img(src="images/ic-add-white.svg" alt="add")
+    .card-detail
+      +card-text-2(title1, title2, description, cta1, src1)

@@ -1,0 +1,68 @@
+include ./_card-image.pug
+
+//----------------------------------------------------------------
+  Card2 Location
+  - image: link to image
+  - title: Card's title
+  - description: Card's description
+  - cta1, cta2: Name of CTA
+  - src1, src2: Link of cta
+  ----------------------------------------------------------------
+
+mixin card2-location(image, title, description, phone1, phone2, email)
+  article.card2.card2-location.no-footer&attributes(attributes)
+    if image
+      .card2-header
+        a(href="where-to-buy-map-office.html")
+          +card-image(image)
+    .card2-body
+      a.card2-title(href="where-to-buy-map-office.html") #{title}
+      p.card2-description !{description}
+    .card2-footer
+      p 
+        | P: 
+        a.link.reverse.dark(href="tel:" + phone1) #{phone1}
+      p 
+        | P: 
+        a.link.reverse.dark(href="tel:" + phone2) #{phone2}
+      p 
+        | E: 
+        a.link.reverse.dark(href="mailto:" + email) #{email}
+
+//-
+  - title
+  - address
+  - distance
+  - like: true/false. Default true
+
+mixin card2-location-2(title, address, distance, like, id)
+  - like = like || true
+  article.card2.card2-location-2.no-footer.button-change-location&attributes(attributes)
+    if title
+      a.card2-title(href="#" title=title) #{title}
+    if address
+      p.card2-helper= address
+      p.card2-helper= distance
+    //- if like
+    //-   .card2-like
+    //-     .like
+    //-       input(type="checkbox" id=id)
+    //-       label(for=id)
+    //-         span.ic-heart-outline
+    //-         span.ic-heart-fill
+    //
+
+mixin card2-location-3(title, address, phone1, phone2, email)
+  article.card2.card2-location-3.no-footer&attributes(attributes)
+    .card2-body
+      a.card2-title(href="#") #{title}
+      p.card2-description !{address}
+      p.card2-links
+        | P: 
+        a.link.reverse.dark(href="tel:" + phone1) #{phone1}
+      p.card2-links
+        | P: 
+        a.link.reverse.dark(href="tel:" + phone2) #{phone2}
+      p.card2-links
+        | E: 
+        a.link.reverse.dark(href="mailto:" + email) #{email}

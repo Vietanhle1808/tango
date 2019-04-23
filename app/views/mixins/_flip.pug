@@ -1,0 +1,21 @@
+include ./_card-text
+
+//----------------------------------------------------------------
+  Flip
+  - title: title of element
+  - subtitle: small text before title
+  - cta: Name of cta
+  - hasIcon (true/false): button with name or not
+  - nameInput: name of input in form
+  - placeholder: text placeholder for input
+  ----------------------------------------------------------------
+
+mixin flip(subtitle, title, description, cta, hasIcon, nameInput, placeholderText)
+  article.flip&attributes(attributes)
+    .flip-front
+      +card-text-3(subtitle, title, description, hasIcon, cta)
+    .flip-back
+      +card-text-3(subtitle, title)
+      form.form
+        .form-group
+          input.form-control(name=nameInput placeholder=placeholderText)

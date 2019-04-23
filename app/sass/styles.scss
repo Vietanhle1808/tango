@@ -1,6 +1,7 @@
 @import 'plugins/normalize';
 @import 'plugins/tiny-slider';
-
+@import 'plugins/jarallax';
+// @import 'plugins/visualizer';
 @import 'variables';
 @import 'mixins';
 @import 'extends';
@@ -9,6 +10,32 @@
 @import 'layout';
 @import 'icon-moon';
 
+@import 'components/pagination';
+@import 'components/preload-image';
+@import 'components/button';
+@import 'components/dropdown';
 @import 'components/header';
+@import 'components/card';
+@import 'components/card2';
+@import 'components/card3';
+@import 'components/form';
+@import 'components/link-group';
+@import 'components/flip';
+@import 'components/slider';
+@import 'components/main-nav';
+@import 'components/sub-nav';
+@import 'components/accordion';
+@import 'components/sections';
+@import 'components/sections2';
+@import 'components/sections3';
+@import 'components/hero-banner';
+@import 'components/introduce';
+@import 'components/toggle-faq';
+@import 'components/nst';
 @import 'components/footer';
+@import 'components/shopping-cart';
+@import 'components/modal';
+@import 'components/login';
+@import 'components/visualizer';
+
 @import 'components/custom-ie';

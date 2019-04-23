@@ -18,8 +18,6 @@ $blue-light:                    #355EAD;
 $blue-soft:                     #BFE2EF;
 $green-dark:                    #005B7C;
 $green:                         #00c500;
-$green-houzz:                         #4dbc15;
-$red:                           red;
 
 $color-facebook:                #3b5998;
 $color-pinterest:               #BB0F24;
@@ -30,9 +28,11 @@ $color-twitter:                 #2AA3EF;
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 $font-roboto:                   'Roboto';
+$font-pt-serif:                 'PT Serif';
+$font-source-sans-pro:          'Source Sans Pro';
 
-$font-body:                     $font-roboto, sans-serif;
-$font-title:                    $font-roboto, sans-serif;
+$font-body:                     $font-source-sans-pro, sans-serif;
+$font-title:                    $font-source-sans-pro, sans-serif;
 
 $link-font-icon:                '../fonts/icon-moon/';
 

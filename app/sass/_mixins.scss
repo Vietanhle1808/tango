@@ -127,7 +127,7 @@ $dot: 0.1px;
 @mixin background-image {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 // mixin for Placeholder

@@ -1,0 +1,45 @@
+include ../mixins/_card-text.pug
+include ../mixins/_card2-introduce.pug
+
+mixin introduce-quartz-design()
+  // Start 'Introduce'
+  section.introduce&attributes(attributes)
+    .introduce-width
+      .introduce-header
+        .container
+          +card-text(
+            "Over 300 Quartz design options at your fingertips",
+            "As the world’s leading manufacturer and distributor of engineeered stone products, Viscostone provides over 300 high quality products to the most disconcerning of clientel.",
+            "Learn more about Vicostone",
+            "#"
+          )
+      .introduce-body
+        .container
+          .introduce-item-row
+            .introduce-item
+              +card2-introduce(
+                "http://via.placeholder.com/291x165",
+                "IN-ROOM SURFACE VISUALIZER",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi",
+                "Design now",
+                "#"
+              )
+            .introduce-item
+              +card2-introduce(
+                "images/introduce-2.jpg",
+                "CARE & MAINTENANCE",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi",
+                "Discover",
+                "#"
+              )
+            .introduce-item
+              +card2-introduce(
+                "images/introduce-3.jpg",
+                "WHERE TO BUY",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi",
+                "Find Your Distributor",
+                "#",
+                "Contact Us",
+                "#"
+              )
+  // End 'Introduce'

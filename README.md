@@ -5,6 +5,7 @@ This is a Pug and Sass starter project using gulp for task automation.
 ## Local Resources Included:
 
 - Normalize CSS for reset CSS on browsers.
+- Skeleton CSS for grid layout (optional).
 
 ## Gulp Tasks:
 
@@ -35,10 +36,21 @@ On the gulp side there are utilities listed bellow
   + Copy all code inside "dist/css/criticalCSS.css" to <style></style> on head
 
 ## JS plugin listing to use:
-1. Slider carousel:
+
+1. Headroom:
+http://wicky.nillia.ms/headroom.js/
+
+2. Inview:
+https://camwiegert.github.io/in-view/
+
+3. Slider carousel:
 https://github.com/ganlanyuan/tiny-slider
 
+3. Parallax scrolling:
+https://github.com/nk-o/jarallax
+
 ## CSS / SASS Styleguide
+
 1. Airbnb:
 https://github.com/airbnb/css
 

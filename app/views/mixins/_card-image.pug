@@ -1,0 +1,54 @@
+//----------------------------------------------------------------
+  Card Image
+  - src: link to image
+  - width: width of image (default = null ~ 0rem)
+  - height: height of image (default = null ~ 0rem)
+  Class of width & height must be define before in css with structure: .w-#{width}, .h-#{height}
+  - class: no-animation (without animation when hover image)
+  ----------------------------------------------------------------
+
+mixin card-image(src, width, height)
+  - var classWidth = width ? "w-" + width : "";
+  - var classHeight = height ? "h-" + height : "";
+  - var className = " " + classWidth + " " + classHeight;
+
+  div(class="card-image" + className)&attributes(attributes)
+    div(class="card-image-display" style="background-image: url('" + src + "');")
+    //- div(class="card-image-display" data-url=src)
+    //- .preloadSpin.sk-three-bounce
+    //-   .sk-child.sk-bounce1
+    //-   .sk-child.sk-bounce2
+    //-   .sk-child.sk-bounce3
+
+
+//----------------------------------------------------------------
+  Card Image With like
+  - src: link to image
+  - width: width of image (default = null ~ 0rem)
+  - height: height of image (default = null ~ 0rem)
+  Class of width & height must be define before in css with structure: .w-#{width}, .h-#{height}
+  - cta: name of cta
+  - like: true/false
+  - id: id of like
+  ----------------------------------------------------------------
+
+mixin card-image-with-like(src, width, height, cta, like, id)
+  - var classWidth = width ? "w-" + width : "";
+  - var classHeight = height ? "h-" + height : "";
+  - var className = " " + classWidth + " " + classHeight;
+
+  div(class="card-image card-image-with-like" + className)
+    div(class="card-image-display" style="background-image: url('" + src + "');")
+    //- .card-image-display(data-url=src)
+    //- .preloadSpin.sk-three-bounce
+    //-   .sk-child.sk-bounce1
+    //-   .sk-child.sk-bounce2
+    //-   .sk-child.sk-bounce3
+    button.button.button-flat-dark
+      | #{cta}
+      if like
+        .like
+          input(type="checkbox" id=id)
+          label(for=id)
+            span.ic-heart-outline
+            span.ic-heart-fill

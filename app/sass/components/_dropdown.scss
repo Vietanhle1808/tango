@@ -1,0 +1,125 @@
+.dropdown {
+  position: relative;
+  z-index: 1000;
+
+  &.change-map {
+    margin-top: 0.3rem;
+  }
+
+  .dropdown-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+    span {
+      vertical-align: middle;
+    }
+
+    [class^="ic-"] {
+      font-size: 1rem;
+      color: $gray-dark;
+      margin-left: 2rem;
+      transition: all .5s $cubic3;
+      transform-origin: center;
+    }
+
+    &.show {
+
+      [class^="ic-"] {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    width: 25rem;
+    min-width: 100%;
+    background: $gray-light;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .5s $cubic3;
+    box-shadow: 0 .5rem 1rem rgba($dark, .08);
+
+    > li:not(:last-child) {
+      border-bottom: solid .1rem rgba($gray, .3);
+    }
+
+    > li a {
+      padding: 1.2rem 2.4rem;
+      display: block;
+      transition: all .3s $cubic3;
+      color: inherit;
+
+      .flag {
+        width: 1.6rem;
+      }
+
+      &:hover {
+        background: $dark;
+        color: $light;
+      }
+    }
+
+    > li {
+      &.right-icon-type {
+        [class^="ic-"] {
+          margin-right: 1rem;
+          color: $gray-dark;
+        }
+      }
+    }
+
+    [class^="ic-"] {
+      transition: all .3s $cubic3;
+    }
+  }
+
+  &.show {
+    .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    // transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    // transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    // transform: translate3d(0, 20%, 0);
+  }
+}
+
+.element-target-toggle {
+  transition: all .4s $cubic3;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  opacity: 0;
+
+  &.show {
+    animation-name: fadeInUp;
+    animation-delay: .2s;
+  }
+}

@@ -1,0 +1,17 @@
+//- Slider
+		- list: list of src image
+include ./_card-image
+
+mixin slider(list)
+	article.slider
+		.slider-product
+			each img, index in list
+				.slider-item
+					+card-image(img)
+		.slider-socials.list-socials
+			a(href="http://www.facebook.com/share.php?u=vicostone.projectuat.com" target="_blank" title="Facebook")
+				span.ic-facebook
+			a(href="https://twitter.com/intent/tweet?text=Vicostone&url=http%3A%2F%2Fvicostone.projectuat.com" target="_blank" title="Twitter")
+				span.ic-twitter
+			//- a(href="#" title="Instagram")
+			//- 	span.ic-instagram

@@ -1,0 +1,40 @@
+include ./_card-image
+
+//----------------------------------------------------------------
+  Card2 galerry
+  - title
+  - description
+  - img: link to image
+  - cta: name of cta
+  - src: link to ...
+  More class to choose: .left (default display on top)
+  ----------------------------------------------------------------
+
+mixin card2-gallery(title, description, img, cta, src)
+  article.card2.card2-gallery&attributes(attributes)
+    .card2-header
+      //- +card-image(img)
+      .card-image
+        .card-image-display(style="background-image: url('"+ img +"');")
+    .card2-body
+      h4.card2-title #{title}
+      p.card2-description #{description}
+      .card2-cta-row
+        a(class="button button-underline" href=ctaUrl title=cta) #{cta}
+
+mixin card2-gallery-preload(title, description, img, cta, src)
+  article.card2.card2-gallery&attributes(attributes)
+    .card2-header
+      //- +card-image(img)
+      .card-image
+        .card-image-display.card-image-preload(data-background-image=img)
+        .preloadSpin.sk-three-bounce
+          .sk-child.sk-bounce1
+          .sk-child.sk-bounce2
+          .sk-child.sk-bounce3
+    .card2-body
+      h4.card2-title #{title}
+      p.card2-description #{description}
+      .card2-cta-row
+        a(class="button button-underline" href=ctaUrl title=cta) #{cta}
+

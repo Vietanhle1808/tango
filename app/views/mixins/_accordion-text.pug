@@ -1,0 +1,9 @@
+//- Accordion text
+
+mixin accordion-text(question, answer, id)
+	article.accordion-text&attributes(attributes)
+		a.accordion-title.accordion-trigger(href="#" + id aria-expanded="false" aria-controls=id ) #{question}
+			.accordion-icon
+				span.ic-add-fill
+		.accordion-content.is-collapsed(id="#" + id aria-hidden="false")
+			p #{answer}

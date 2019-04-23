@@ -1,0 +1,14 @@
+//-
+	- addon: text of addon
+	- title: title of link
+	- arrow: true/false to turn on/off. Default on
+
+mixin link-with-addon(addon, title, arrow)
+	- arrow = arrow || true
+	article.link-group.link-with-addon
+		.link-group-addon
+			span= addon
+		.link-group-cta
+			a(href="#" title=title class="link")= title
+			a(href="#" title=title class="button button-icon")
+				span.ic-arrow

@@ -1,0 +1,146 @@
+//----------------------------------------------------------------
+  Card text
+  - img1: image before cta
+  - img2: image before heading
+  ----------------------------------------------------------------
+
+mixin card-text(title, description, cta, src, iconButton, img1, img2)
+  article.card.card-text&attributes(attributes)
+    .card-header
+      if img2
+        img.card-thumb(src=img2 alt="image")
+      if title
+          h2.card-title #{title}
+    if (img1 || description)
+    .card-body
+      if img1
+        img1.card-thumb(src=img1 alt="image")
+      if description
+        p.card-description #{description}
+    if cta
+      .card-footer
+        a(class="button button-outline-light" href=src title=cta) #{cta}
+          if iconButton
+            span(class=iconButton)
+
+
+//----------------------------------------------------------------
+  Card text 2: 1 CTA with icon
+  - title1: Row 1 of title
+  - title2: Row 2 of title
+  - cta: Name of cta
+  - src: Link of cta
+  ----------------------------------------------------------------
+
+mixin card-text-2(title1, title2, description, cta, src)
+  article.card.card-text-2&attributes(attributes)
+    .card-header
+      h2.card-title
+        | #{title1}
+        br
+        | #{title2}
+    if description
+      .card-body
+        p.card-description !{description}
+    if cta
+      .card-footer
+        if (attributes.class != "light")
+          a(class="button button-flat-primary" href=src title=cta) #{cta}
+            span.ic-arrow
+        else
+          a(class="button button-flat-white" href=src title=cta) #{cta}
+            span.ic-arrow
+
+
+//----------------------------------------------------------------
+  Card text 2: 1 CTA with icon & 1 CTA without icon
+  - title1: Row 1 of title
+  - title2: Row 2 of title
+  - cta1, cta2: Name of cta
+  - src1, src2: Link of cta
+  ----------------------------------------------------------------
+
+mixin card-text-2-2(title1, title2, description, cta1, src1, cta2, src2)
+  article.card.card-text-2&attributes(attributes)
+    .card-header
+      h2.card-title
+        | #{title1}
+        br
+        | #{title2}
+    - if (description)
+      .card-body
+        p.card-description #{description}
+    .card-footer
+      a(class="button button-flat-primary" href=src1 title=cta1) #{cta1}
+      a(class="button button-flat-primary" href=src2 title=cta2) #{cta2}
+        span.ic-arrow
+
+
+//----------------------------------------------------------------
+  Card text 3
+  - subheading
+  - heading: Title of card
+  - description: Description of card
+  - src: link to page of cta
+  - cta: name of cta
+  - hasIcon (true/false): button has icon or not
+  ----------------------------------------------------------------
+
+mixin card-text-3(subheading, heading, description, hasIcon, cta, src)
+  article.card.card-text-3
+    .card-header
+      h5.card-subtitle #{subheading}
+      h4.card-title #{heading}
+    if description
+      .card-body
+        p.card-description #{description}
+    if cta
+      .card-footer
+        a(class="button button-flat-white" href="#" title=cta) #{cta}
+          if hasIcon
+            span.ic-arrow
+
+
+//----------------------------------------------------------------
+  Card overlay
+  - heading: Title of card
+  - description: Description of card
+  - src: link to page of cta
+  - image: link of image
+  ----------------------------------------------------------------
+
+mixin card-overlay(heading, description, src, image)
+  - var css = "background-image: url(" + image + ");"
+
+  article.card.card-overlay&attributes(attributes)
+    .card-thumb-overlay(style=css)
+    .card-detail-overlay
+      .card-header
+        h3.card-title= heading
+      .card-body
+        p.card-description= description
+      .card-footer
+        a(class="button button-icon" title=heading href=src)
+          span.ic-add-fill
+
+
+//----------------------------------------------------------------
+  Card text icon
+  - heading: Title of card
+  - description: Description of card
+  - src: link to page of cta
+  - image: link of image
+  ----------------------------------------------------------------
+
+mixin card-text-icon(heading, description, src, icon)
+  article.card.card-text-icon&attributes(attributes)
+    .card-header
+      h3.card-title= heading
+    .card-body
+      p.card-description= description
+    .card-footer
+      a(class="button button-icon" title=heading href=src)
+        span(class=icon)
+
+
+

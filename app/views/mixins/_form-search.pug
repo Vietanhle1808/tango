@@ -1,0 +1,7 @@
+mixin form-search(value, placeholder)
+	- placeholder = placeholder || 'Search something'
+	form.form-search&attributes(attributes)
+		.form-group
+			input.form-control-search(type="search" value=value placeholder=placeholder)
+		button.button.button-icon
+			span.ic-search

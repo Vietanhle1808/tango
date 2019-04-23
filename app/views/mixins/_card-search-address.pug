@@ -1,0 +1,35 @@
+include ./_form-search
+
+//----------------------------------------------------------------
+  Card search
+  ----------------------------------------------------------------
+
+mixin card-search-address(title, description, value, cta, src, placeholder, classBtnSpecify, mapUrl)
+  article.card.card-search&attributes(attributes)
+    if title
+      .card-header
+        h2.card-title #{title}
+    .card-body
+      if description
+        p.card-description #{description}
+      form.form-search.form-search-address
+        .form-group
+          input.form-control-search(type="search" value=value placeholder=placeholder)
+        button.button.button-icon.button-search-address
+          span.ic-search
+    .loading-box
+      .loading-box-wrapper
+        .sk-three-bounce
+          .sk-child.sk-bounce1
+          .sk-child.sk-bounce2
+          .sk-child.sk-bounce3
+    if cta
+      .card-footer
+        if classBtnSpecify
+          a(class="button button-outline-light " + classBtnSpecify  href=src title=cta data-map-url=mapUrl)
+            | #{cta}
+            span.ic-send
+        else
+          a(class="button button-outline-light"  href=src title=cta data-map-url=mapUrl)
+            | #{cta}
+            span.ic-send

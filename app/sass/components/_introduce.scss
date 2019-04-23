@@ -1,0 +1,103 @@
+.introduce {
+  padding-bottom: 6rem;
+  padding-top: 10rem;
+
+  &.small-spacing-top {
+    padding-top: 3.6rem;
+  }
+
+  &.no-spacing-top {
+    padding-top: 0;
+  }
+
+  &.no-spacing-bottom {
+    padding-bottom: 0;
+  }
+
+  &.no-spacing-top-mobile {
+    @include max-sm {
+      padding-top: 0;
+    }
+  }
+
+  .introduce-logo {
+    text-align: center;
+    margin-top: 6rem;
+
+    > img {
+      margin-top: -6rem;
+    }
+  }
+
+  .introduce-width {
+    @include min-sm {
+      $size: $width-page + 80px;
+      max-width: $size;
+      width: 90%;
+    }
+    margin: 0 auto;
+  }
+  .introduce-header {
+    background: $gray-light;
+
+    .card-text {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
+      @include min-sm {
+        padding-bottom: 15.4rem;
+      }
+      margin: 0 auto;
+
+      @include min-l {
+        max-width: 66.66666667%;
+      }
+    }
+  }
+
+  .introduce-body {
+    margin-top: 4rem;
+
+    @include min-sm {
+      margin-top: -10rem;
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .introduce-item-row {
+      width: 100%;
+      @include min-sm {
+        display: flex;
+        margin: 0 #{0 - $gutter / 2};
+
+        .introduce-item {
+          flex: 1;
+          padding: 0 #{$gutter / 2};
+        }
+      }
+
+      @include min-l {
+        max-width: 83.333333333%;
+      }
+    }
+  }
+
+  .introduce-item {
+    @include max-sm {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+    .card2 {
+      height: 100%;
+    }
+    .card-image {
+      > div {
+        height: 16.5rem;
+      }
+    }
+  }
+}

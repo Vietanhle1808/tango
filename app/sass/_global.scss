@@ -15,6 +15,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $dark;
+  &.disable-scroll {
+    .body-wrapper {
+      width: 100%;
+      height: 100vh;
+    }
+  }
 }
 
 main {
@@ -49,7 +55,7 @@ img {
 }
 
 p {
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: $font-weight-regular;
 }
 
@@ -58,6 +64,24 @@ a {
   transition: color 0.3s $cubic3;
   color: $primary-color;
   font-size: 1.2rem;
+}
+
+.parallax-line-box {
+  margin-top: 2rem;
+}
+
+.parallax-switch-box {
+  margin-top: 4rem;
+}
+
+.error {
+  border-color: $color-pinterest !important;
+  background: rgba(187, 15, 36, 0.1) !important;
+}
+
+.error-message {
+  color: $color-pinterest !important;
+  font-style: italic;
 }
 
 .body-wrapper {

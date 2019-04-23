@@ -3,3 +3,16 @@
 @include font-face($font-roboto, "../fonts/Roboto/Roboto-light", 300, lighter, ttf woff woff2);
 @include font-face($font-roboto, "../fonts/Roboto/Roboto-regular", 400, normal, ttf woff woff2);
 @include font-face($font-roboto, "../fonts/Roboto/Roboto-bold", 700, bold, ttf woff woff2);
+
+
+/* PT Serif
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@include font-face($font-pt-serif, "../fonts/PT_Serif/PT_Serif-Web-Regular", 400, normal, ttf);
+
+
+/* Source Sans Pro
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@include font-face($font-source-sans-pro, "../fonts/Source_Sans_Pro/SourceSansPro-Light", 300, lighter, ttf woff woff2);
+@include font-face($font-source-sans-pro, "../fonts/Source_Sans_Pro/SourceSansPro-Regular", 400, normal, ttf woff woff2);
+@include font-face($font-source-sans-pro, "../fonts/Source_Sans_Pro/SourceSansPro-SemiBold", 500, bolder, ttf woff woff2);
+@include font-face($font-source-sans-pro, "../fonts/Source_Sans_Pro/SourceSansPro-Bold", 700, bold, ttf woff woff2);

@@ -1,0 +1,110 @@
+.section-toggle-faq {
+  width: 100%;
+  max-width: 90.4rem;
+  margin: 4rem auto 0;
+
+  .list-toggle-faq {
+    .toggle-faq-item {
+      @extend %inview-init;
+      &:nth-of-type(2) {
+        transition-delay: 0.2s;
+      }
+      &:nth-of-type(3) {
+        transition-delay: 0.4s;
+      }
+      &:nth-of-type(4) {
+        transition-delay: 0.6s;
+      }
+      &:nth-of-type(5) {
+        transition-delay: 0.8s;
+      }
+    }
+  }
+  
+  &.is-inview {
+    .section-toggle-faq-content {
+      .load-more-faq {
+        @extend %inview-on;
+      }
+    }
+    
+    .list-toggle-faq {
+      .toggle-faq-item {
+        @extend %inview-on;
+      }
+    }
+  }
+}
+
+.section-toggle-faq-content {
+  .load-more-faq {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    @extend %inview-init;
+    transition-delay: 0.6s;
+  }
+}
+
+.list-toggle-faq {
+  .toggle-faq-item {
+    border: 0.1rem solid $gray;
+    padding: 3rem 2.7rem 3rem 4rem;
+    position: relative;
+    margin-bottom: 1rem;
+    .toggle-faq-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: $blue-dark;
+      cursor: pointer;
+      &.is-active {
+        .btn-expand-content {
+          &:after {
+            transform: translate(-50%, -50%) rotate(0);
+          }
+        }
+      }
+      .btn-expand-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &:before,
+        &:after {
+          content: '';
+          width: 1rem;
+          height: 0.1rem;
+          background: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:after {
+          transform: translate(-50%, -50%) rotate(90deg);
+          transition: all 0.3s $cubic3;
+        }
+      }
+    }
+    .toggle-faq-item-content {
+      width: 100%;
+      .toggle-faq-heading {
+        position: relative;
+        padding-right: 12%;
+      }
+      .toggle-faq-details {
+        padding-right: 12%;
+        color: $blue-dark;
+        // display: none;
+        overflow: hidden;
+        .toggle-faq-details-wrapper {
+          padding-top: 3rem;
+        }
+      }
+    }
+  }
+}

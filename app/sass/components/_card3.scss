@@ -1,0 +1,59 @@
+.card3 {
+  .card3-title {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+  .card3-description {
+    margin-bottom: 3rem;
+  }
+}
+
+.card3-news {
+  display: flex;
+  margin: 0 #{-$gutter/2} 2.2rem #{-$gutter/2};
+
+  @include max-sm {
+    flex-wrap: wrap;
+  }
+
+  .card3-thumb {
+    padding: 0 $gutter/2;
+
+    .card-image .card-image-display {
+      min-height: 24rem;
+    }
+
+    flex: 0 0 100%;
+
+    @include min-sm {
+      flex: 0 0 26rem;
+      max-width: 26rem;
+    }
+  }
+
+  .card3-content {
+    padding: 2rem $gutter/2;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    @include min-sm {
+      padding: 2rem 3.4rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .card3-socials {
+      position: absolute;
+      bottom: 2rem;
+      right: 3.4rem;
+
+      @include min-sm {
+        top: 0;
+        bottom: auto;
+        right: 0;
+      }
+    }
+  }
+}

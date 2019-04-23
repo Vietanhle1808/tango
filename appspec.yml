@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist
+    destination: /var/www/development/vicostone-fe
+hooks:
+  AfterInstall:
+    - location: scripts/init.sh
+      timeout: 180
+      runas: root
+  BeforeInstall:
+    - location: scripts/before.sh
+      timeout: 180
+      runas: root

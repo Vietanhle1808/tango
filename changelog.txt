@@ -1,0 +1,6 @@
+Update html
+1. home.html
+	- Change dropdown after login
+2. quartz-surface.html
+	- Change menu mobile
+3. Update font icon

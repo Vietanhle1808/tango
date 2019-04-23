@@ -1,0 +1,77 @@
+//----------------------------------------------------------------
+  Title of products section
+  - title
+  - count
+  ----------------------------------------------------------------
+
+mixin title-section(title, count, description)
+  article.title-section&attributes(attributes)
+    h2.title-section-heading
+      span !{title}
+    if count
+      span.title-section-display= count
+    if description
+      p.title-section-description= description
+
+
+//----------------------------------------------------------------
+  Title of small section
+  - title
+  - helper
+  - edit: true/false (default: false)
+  ----------------------------------------------------------------
+
+mixin title-section-2(title, helper, edit)
+  - edit = edit || false
+  .title-section-2
+    .title-section-left
+      if helper
+        span.title-section-helper !{helper}
+      h6.title-section-heading !{title}
+    if edit
+      .title-section-right
+        button.button.button-icon 
+          span.text Edit
+          span.ic-edit
+
+
+//----------------------------------------------------------------
+  Title of gallery
+  - title1: row1
+  - title2: row2
+  ----------------------------------------------------------------
+mixin title-section-gallery(title1, title2)
+  article.title-section-gallery
+    h2.title-section-gallery-heading= title1
+    h3.title-section-gallery-subheading= title2
+
+
+//----------------------------------------------------------------
+  Title of gallery 2
+  - title
+  - code
+  - description
+  ----------------------------------------------------------------
+mixin title-section-gallery-2(title, code, description)
+  article.title-section-gallery-2
+    .title-section-gallery-header
+      h2.title-section-gallery-heading= title
+      h3.title-section-gallery-code= code
+    .title-section-gallery-body
+      p= description
+
+
+//----------------------------------------------------------------
+  Title of gallery 2 with read more
+  - title
+  - code
+  - description
+  ----------------------------------------------------------------
+mixin title-section-gallery-2(title, code, description)
+  article.title-section-gallery-2
+    .title-section-gallery-header
+      h2.title-section-gallery-heading= title
+      h3.title-section-gallery-code= code
+    .title-section-gallery-body.read-more-box
+      p.read-more-content(data-max-text="100") #{description}
+      a.button-underline.read-more-link.is-off(href="javascript:void(0)" title="Read more") Read more

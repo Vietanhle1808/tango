@@ -1,6 +1,28 @@
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-IjwqUixLpAkf1GhiwSa39Dn_Etet8kc" async defer)
+script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+script.
+  var allLocations = [{'location': 'Hanoi', 'name': 'Vicostone Vietnam','address':'Hoa Lac Hi-tech Park, Thach Hoa Commune, Thach That District, Hanoi, Vietnam','lat': '21.0075179','lng': '105.5415755'},{'location': 'Canada','name': 'Vicostone Canada','address':'341 Edgeley Blvd, Vaughan, ON L4K 3Y2, Canada','lat': '43.8014787','lng': '-79.5335599'},{'location': 'USA','name': 'Vicostone USA','address':'11620 GOODNIGHT LANE, SUITE 100, DALLAS, TX 75229','lat': '32.9049242','lng': '-96.9016291'}];
+  var urlPaypal = 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_cart&upload=1&return=http://us.vicostone.com&business=tungda-facilitator@smartosc.com';
 // build:js js/main.min.js async
 script(type='text/javascript', src='js/plugins/tiny-slider.min.js')
-
+//- script(type='text/javascript', src='js/plugins/in-view.min.js')
+script(type='text/javascript', src='js/plugins/jarallax/jarallax.min.js')
+script(type='text/javascript', src='js/plugins/jarallax/jarallax-element.min.js')
+//- script(type='text/javascript', src='js/plugins/lozad.min.js')
+script(type='text/javascript', src='js/plugins/nst.min.js')
+script(type='text/javascript', src='js/plugins/validate.min.js')
+script(type='text/javascript', src='js/plugins/squeezebox.min.js')
+script(type='text/javascript', src='js/plugins/geolib.min.js')
+//- Visualizer
+//- script(src='js/plugins/js/jquery.mockjax.min.js')
+//- script(src='js/plugins/js/visualizer.js')
+//- script(src='js/plugins/js/download2.js')
+//- script(src='js/plugins/js/konva.min.js')
 script(type='text/javascript', async, src='js/common.js')
+script(type='text/javascript', async, src='js/form.js')
+script(type='text/javascript', async, src='js/order.js')
+script(type='text/javascript', async, src='js/map.js')
+script(type='text/javascript', async, src='js/imageLoad.js')
+script(type='text/javascript', async, src='js/user.js')
 script(type='text/javascript', async, src='js/main.js')
 // endbuild

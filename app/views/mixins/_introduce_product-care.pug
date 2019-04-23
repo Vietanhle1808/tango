@@ -1,0 +1,45 @@
+include ../mixins/_card-text.pug
+include ../mixins/_card2-introduce.pug
+
+mixin introduce()
+  // Start 'Introduce'
+  section.introduce&attributes(attributes)
+    .introduce-width
+      .introduce-header
+        .container
+          +card-text(
+            "Over 300 quartz design options at your fingertips",
+            "As the world’s leading manufacturer and distributor of engineeered stone products, Viscostone provides over 300 high quality products to the most disconcerning of clientel.",
+            "Learn more about Vicostone",
+            "~/link.aspx?_id=C4A6275E8B724CAEB4715D1AFF3635B6&amp;_z=z"
+          )
+      .introduce-body
+        .container
+          .introduce-item-row
+            .introduce-item
+              +card2-introduce(
+                "http://via.placeholder.com/291x165",
+                "IN-ROOM SURFACE VISUALIZER",
+                "The Visualizer helps you combine different designs to find the best combination of surface materials for your home",
+                "Design now",
+                "~/link.aspx?_id=6705B6294607453593E045CA792AA360&amp;_z=z"
+              )
+            .introduce-item
+              +card2-introduce(
+                "images/introduce-2.jpg",
+                "QUARTZ SURFACES",
+                "Quartz Surfaces are high-quality, solid, non-porous products that resist scratches, heat, and stains. However, VICOSTONE® Quartz Surfaces are not heat, stain and scratch proof. VICOSTONE®",
+                "Discover",
+                "~/link.aspx?_id=71B4B4E082A44200A5854558C3C0CB6B&amp;_z=z"
+              )
+            .introduce-item
+              +card2-introduce(
+                "images/introduce-3.jpg",
+                "WHERE TO BUY",
+                "Vicostone is being globally distributed in more than 40 countries under our distributors' private brand",
+                "Find Your Distributor",
+                "~/link.aspx?_id=3C6D6C52AFDB4C75B7137EF8A262522B&amp;_z=z",
+                "Contact Us",
+                "~/link.aspx?_id=257026A8D3554948B66DB16DE9D7EC66&amp;_z=z"
+              )
+  // End 'Introduce'

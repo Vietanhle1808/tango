@@ -1,0 +1,47 @@
+include ./_title-section
+include ./_card2-product
+
+mixin section-discover()
+	// Start .section-discover
+	section.section-discover&attributes(attributes)
+		.container
+			.section-discover-header
+				+title-section("Discover the collections")
+			.section-discover-body
+				.section-discover-item
+					+card2-product(
+						"SURFACE NAME WITH ID",
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi, ",
+						"images/product-1.jpg",
+						"images/product-4.jpg",
+						"#",
+						null,
+						"Explore",
+						"#",
+						"cb1"
+					)
+				.section-discover-item
+					+card2-product(
+						"SURFACE NAME WITH ID",
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi, ",
+						"images/product-2.jpg",
+						"images/product-4.jpg",
+						"#",
+						null,
+						"Explore",
+						"#",
+						"cb2"
+					)
+				.section-discover-item
+					+card2-product(
+						"SURFACE NAME WITH ID",
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta metus nisi, ",
+						"images/product-3.jpg",
+						"images/product-4.jpg",
+						"#",
+						null,
+						"Explore",
+						"#",
+						"cb3"
+					)
+	// End .section-discover

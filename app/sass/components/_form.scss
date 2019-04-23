@@ -1,0 +1,428 @@
+.form {
+  .form-group {
+    position: relative;
+    z-index: 0;
+
+    .form-control {
+      background: $light;
+      border: solid .1rem $gray;
+      padding: 1rem 2rem;
+      color: $dark;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      transition: border .2s $cubic2;
+      appearance: none;
+
+      @include placeholder {
+        color: $gray;
+      }
+
+      &:visited, &:focus, &:active {
+        border-color: $dark;
+      }
+    }
+
+    select.form-control {
+      appearance: none;
+      background: url('../images/ic-arrow-down.svg') no-repeat;
+      background-size: 1.2rem auto;
+      background-position: right 2.4rem center;
+      cursor: pointer;
+      padding-right: 5rem;
+    }
+
+    .form-control-image {
+      position: absolute;
+      right: 2rem;
+      bottom: 1rem;
+      transform: translateY(-50%);
+      z-index: 1;
+      line-height: 1;
+    }
+  }
+
+  .form-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 #{-$gutter/2};
+
+    .form-group {
+      padding: 0 #{$gutter/2};
+      margin-bottom: #{$gutter};
+
+      &.large-space {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    > .form-group {
+      flex: 0 0 100%;
+    }
+
+    .form-group.form-group-quarter {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+    @include min-s {
+      .form-group.form-group-quarter {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+      .form-group.form-group-half {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .form-group.form-group-full {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  .form-footer {
+    text-align: center;
+    padding-top: 5rem;
+    position: relative;
+
+    &.small-space {
+      padding-top: 1.6rem;
+    }
+
+    &.is-loading {
+      &:before {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        content: '';
+      }
+      .button {
+        opacity: 0.4;
+      }
+    }
+
+    .footer-additional {
+      font-size: 1.4rem;
+      margin-top: 4rem;
+
+      > a {
+        font-size: 1.4rem;
+      }
+    }
+
+    .button {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-group-checkbox {
+    &.lighter {
+      label {
+        color: rgba($dark, .5);
+      }
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    .form-control-checkbox-label {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      border: solid .1rem $gray;
+      margin-right: 2rem;
+      vertical-align: middle;
+      position: relative;
+      cursor: pointer;
+      transition: border .3s $cubic3;
+
+      &:hover {
+        border-color: $dark;
+      }
+
+      &::before {
+        content: '';
+        width: 1.5rem;
+        height: .5rem;
+        border-bottom: solid .1rem $dark;
+        border-left: solid .1rem $dark;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        z-index: 1;
+        transition: all .3s $cubic3;
+        opacity: 0;
+      }
+
+      + label {
+        display: inline-block;
+        max-width: calc(100% - 6rem);
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+
+      &:checked + label::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .form-group-capcha {
+    display: flex;
+    margin-top: 1.2rem;
+
+    > div {
+      flex: 1;
+    }
+
+    @include min-s {
+      align-items: flex-end;
+
+      > div {
+        margin-right: $gutter;
+        max-width: 30rem;
+      }
+
+      .form-control {
+        width: 100%;
+      }
+    }
+
+    @include max-s {
+      flex-wrap: wrap;
+
+      > div {
+        flex: 0 0 100%;
+        margin-top: 2rem;
+        order: 2;
+      }
+
+      > img {
+        order: 1;
+      }
+    }
+  }
+
+  .loading-box {
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    display: none;
+    &.is-visible {
+      display: block;
+    }
+    .loading-box-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.form-group-inline {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.6rem;
+
+  @include max-sm {
+    flex-wrap: wrap;
+  }
+
+  @include min-m {
+    > .form-group {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.form-search {
+  display: flex;
+  border-bottom: solid .1rem $gray;
+  transition: all .5s $cubic3;
+
+  &.active {
+    background: $gray-light;
+    border-bottom-color: $dark;
+  }
+
+  .form-group {
+    flex: 1;
+
+    .form-control-search {
+      border: none;
+      width: 100%;
+      padding: .6rem 1rem;
+      text-transform: uppercase;
+      font-weight: $font-weight-semi-bold;
+      letter-spacing: .1rem;
+      background: transparent;
+
+      &::placeholder {
+        font-weight: $font-weight-light;
+        color: $gray-dark;
+      }
+    }
+  }
+
+  .button {
+    flex: 0 0 2.8rem;
+    // max-width: 2.8rem;
+    cursor: pointer;
+    padding: 0 1.2rem;
+    font-size: 2.5rem;
+    color: $gray;
+
+    [class^="ic"] {
+      vertical-align: middle;
+    }
+
+    &:hover [class^="ic"]::before {
+      color: $gray-dark;
+    }
+  }
+}
+
+.select-underline {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: solid .1rem $gray;
+  padding: .6rem 3.2rem .6rem 1.2rem;
+  background: url('../images/ic-arrow-down.svg') no-repeat;
+  background-size: .8rem auto;
+  background-position: right 1rem center;
+  cursor: pointer;
+}
+
+.form-outline {
+  .form-group {
+    .form-label {
+      text-transform: uppercase;
+      color: $gray-dark;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      width: 100%;
+
+      > a {
+        text-transform: none;
+        color: $gray-dark;
+        font-size: 1.3rem;
+
+        &:hover {
+          box-shadow:  0 -.1rem 0 0 $gray-dark inset, 0 -.3rem 0 0 transparent inset !important;
+        }
+      }
+    }
+
+    .form-control {
+      border: solid .1rem $gray ;
+      background: transparent;
+      padding: 1rem 2rem;
+      transition: all .3s $cubic3;
+      border-radius: 0;
+      box-shadow: none;
+      &.is-error {
+        border-color: $color-pinterest;
+        color: $color-pinterest;
+      }
+    }
+  }
+}
+
+.form-subcribe {
+  font-size: 1.4rem;
+
+  .form-group {
+     display: flex;
+     position: relative;
+     z-index: 1;
+
+    .form-control {
+      margin-right: -.1rem;
+      width: 100%;
+    }
+  }
+}
+
+.error-message-box,
+.fail-message-box,
+.success-message-sent {
+  color: $color-pinterest;
+  border: 1px solid $color-pinterest;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 2rem;
+  background: rgba($color-pinterest, 0.1);
+  display: none;
+  &.is-visible {
+    display: block;
+  }
+  .error-message-row {
+    display: none;
+    &.is-visible {
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+.success-message-sent {
+  color: $green;
+  border-color: $green;
+  background: rgba($green, 0.1);
+}
+
+.success-message-box {
+  position: relative;
+  height: 0;
+  .success-message-box-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s $cubic4 0.3s;
+    text-align: center;
+    color: white;
+    font-size: 2.6rem;
+    padding: 0.8rem 1.2rem;
+    background: $blue-dark;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    @include max-s {
+      font-size: 1.9rem;
+    }
+  }
+  &.is-visible {
+    .success-message-box-content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.form-wrapper {
+  height: 100%;
+  max-height: 900px;
+  overflow: hidden;
+  transition: max-height 0.7s $cubic4;
+  &.email-sent-success {
+    // max-height: 67px;
+    .form {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 4rem);
+    }
+  }
+  .form {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    transition: all 0.6s $cubic4;
+  }
+}

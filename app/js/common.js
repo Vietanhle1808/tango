@@ -42,7 +42,7 @@ var globalFunction = {
   domExists: function (node) {
     return (node === document.body) ? false : document.body.contains(node);
   },
-  checkValid: function (value, lengthCheck) {
+  checkValid: function(value, lengthCheck) {
     lengthCheck = true;
 
     if (typeof value !== 'undefined' && value !== null) {
@@ -99,6 +99,35 @@ var globalFunction = {
     xhr.send(JSON.stringify(data));
     return xhr;
   },
+  getLatitudeLongitude: function (callback, address) {
+    // If adress is not supplied, use default value 'Hanoi, USA, Canada'
+    // address = address || 'Hanoi, USA, Canada';
+    // Initialize the Geocoder
+    geocoder = new google.maps.Geocoder();
+    if (geocoder) {
+      geocoder.geocode({
+        'address': address
+      }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          callback(results[0]);
+        }
+      });
+    }
+  },
+  getCloestLocation: function (callback, location) {
+    var distFromCurrent = function (coord) {
+      return {
+        coord: coord,
+        dist: geolib.getDistance(location, coord)
+      };
+    }
+
+    var closest = allLocations.map(distFromCurrent).sort(function (a, b) {
+      return a.dist - b.dist;
+    })[0];
+
+    callback(closest);
+  },
   isInViewport: function (elements) {
     var scroll = window.scrollY || window.pageYOffset
     var boundsTop = elements.getBoundingClientRect().top + scroll
@@ -125,6 +154,59 @@ var globalFunction = {
     }
     return siblings;
   },
+  clearStateFormField: function (formBoxParam) {
+    var errMsgBox = formBoxParam.querySelector('.error-message-box');
+    var errMsgRow = errMsgBox.querySelectorAll('.error-message-row');
+    var formGroup = formBoxParam.querySelectorAll('.form-group');
+
+    formGroup.forEach(function (group) {
+      group.childNodes.forEach(function (childGroup) {
+        if (childGroup.classList) {
+          if (childGroup.classList.contains('is-error')) {
+            childGroup.classList.remove('is-error');
+          }
+        }
+      });
+    });
+
+    errMsgBox.classList.remove('is-visible');
+    errMsgRow.forEach(function (row) {
+      row.classList.remove('is-visible');
+    });
+  },
+  showSuccessFormField: function (formBoxParam) {
+    var formBoxWrapper = formBoxParam.querySelector('.form-wrapper');
+    var successBox = formBoxParam.querySelector('.success-message-box');
+    var successBoxContent = successBox.querySelector('.success-message-box-content');
+    var hSuccessContent = successBoxContent.getBoundingClientRect().height;
+
+    formBoxWrapper.classList.add('email-sent-success');
+    successBox.classList.add('is-visible');
+    formBoxWrapper.style.maxHeight = hSuccessContent + 'px';
+  },
+  showErrorForm: function (error, formBoxParent) {
+    var rowMsgError = error.element.dataset.msgError;
+
+    error.element.classList.add('is-error');
+
+    var errorMsgBox = formBoxParent.querySelectorAll('.error-message-box');
+    if (errorMsgBox.length > 0) {
+      errorMsgBox.forEach(function (elMsgBox) {
+        elMsgBox.classList.add('is-visible');
+      });
+    }
+
+    var errorMsgRow = formBoxParent.querySelectorAll('.error-message-row');
+    if (errorMsgRow.length > 0) {
+      errorMsgRow.forEach(function (elMsgRow) {
+        elMsgRow.classList.forEach(function (className) {
+          if (className === rowMsgError) {
+            elMsgRow.classList.add('is-visible');
+          }
+        });
+      });
+    }
+  },
   setCookie: function (cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -145,6 +227,10 @@ var globalFunction = {
     }
     return "";
   },
+  showLoadingFormField: function (formBoxParam) {
+    var loadingBox = formBoxParam.querySelector('.loading-box');
+    loadingBox.classList.add('is-visible');
+  },
   detectBrowser: function (callback) {
     // Opera 8.0+
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -152,7 +238,7 @@ var globalFunction = {
     // Firefox 1.0+
     var isFirefox = typeof InstallTrigger !== 'undefined';
 
-    // Safari 3.0+ "[object HTMLElementConstructor]"
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
     var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {
       return p.toString() === "[object SafariRemoteNotification]";
     })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
@@ -171,36 +257,17 @@ var globalFunction = {
 
     callback(isOpera, isFirefox, isSafari, isIE, isEdge, isChrome, isBlink);
   },
-  insertAfterEl: function(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  },
-  scrollTo: function(scrollingElement, to, duration) {
-    var
-    element = document.scrollingElement || document.documentElement,
-    start = element.scrollTop,
-    change = to - start,
-    startDate = +new Date(),
-    // t = current time
-    // b = start value
-    // c = change in value
-    // d = duration
-    easeInOutQuad = function(t, b, c, d) {
-      t /= d/2;
-      if (t < 1) return c/2*t*t + b;
-      t--;
-      return -c/2 * (t*(t-2) - 1) + b;
-    },
-    animateScroll = function() {
-      const currentDate = +new Date();
-      const currentTime = currentDate - startDate;
-      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
-      if(currentTime < duration) {
-        requestAnimationFrame(animateScroll);
+  convertFileToDataURLviaFileReader: function (url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+      var reader = new FileReader();
+      reader.onloadend = function() {
+        callback(reader.result);
       }
-      else {
-        element.scrollTop = to;
-      }
+      reader.readAsDataURL(xhr.response);
     };
-    animateScroll();
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
   }
 };

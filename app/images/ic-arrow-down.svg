@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.514 10">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: #030303;
+      }
+    </style>
+  </defs>
+  <g id="Group_79" data-name="Group 79" class="cls-1" transform="translate(0)">
+    <path id="noun_602481" class="cls-2" d="M36.323,39.81h11a.775.775,0,0,1,.676.382.765.765,0,0,1-.031.791l-5.5,8.506a.807.807,0,0,1-1.288,0l-5.484-8.506a.67.67,0,0,1-.115-.409.9.9,0,0,1,.089-.382.812.812,0,0,1,.655-.382Z" transform="translate(-35.579 -39.81)"/>
+  </g>
+</svg>
