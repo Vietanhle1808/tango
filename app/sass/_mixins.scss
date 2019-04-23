@@ -1,0 +1,150 @@
+$dot: 0.1px;
+//min for horizontal mobile
+@mixin min-s {
+  @media (min-width: #{$break-s}) {
+    @content;
+  }
+}
+
+//min for vertical tablet
+@mixin min-sm {
+  @media (min-width: #{$break-sm + $dot}) {
+    @content;
+  }
+}
+
+//min for horizontal tablet
+@mixin min-m {
+  @media (min-width: #{$break-m}) {
+    @content;
+  }
+}
+
+//min for desktop
+@mixin min-l {
+  @media (min-width: #{$break-l}) {
+    @content;
+  }
+}
+
+//min for large desktop
+@mixin min-xl {
+  @media (min-width: #{$break-xl}) {
+    @content;
+  }
+}
+
+//max for desktop
+@mixin max-xl {
+  @media (max-width: #{$break-xl - $dot}) {
+    @content;
+  }
+}
+
+//max for horizontal tablet
+@mixin max-l {
+  @media (max-width: #{$break-l - $dot}) {
+    @content;
+  }
+}
+
+// max for vertical tablet
+@mixin max-m {
+  @media (max-width: #{$break-m - $dot}) {
+    @content;
+  }
+}
+
+// max for horizontal mobile
+@mixin max-sm {
+  @media (max-width: #{$break-sm - $dot}) {
+    @content;
+  }
+}
+
+//max for vertical mobile
+@mixin max-s {
+  @media (max-width: #{$break-s - $dot}) {
+    @content;
+  }
+}
+
+//max for custom break-point
+@mixin max-custom-breakpoint($custom-breakpoint) {
+  @media (max-width: #{$custom-breakpoint - $dot}) {
+    @content;
+  }
+}
+
+//min for custom break-point
+@mixin min-custom-breakpoint($custom-breakpoint) {
+  @media (min-width: #{$custom-breakpoint}) {
+    @content;
+  }
+}
+
+// String Replace
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+
+// Font Face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// minxin for background image
+@mixin background-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+// mixin for Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,161 @@
+/**
+ *	=================================================================================================
+ *
+ *  [ Color Stylesheet ]
+ *
+ *	Project:		Tango - Responsive Multi-Purpose Landing Page
+ *	Version:		1.3
+ *	First change:	02/10/2016
+ *	Last change:	02/25/2016
+ *	Primary use:	Multi-Purpose Landing Page
+ *	File Name: 		lime_skin.css
+ *	Author: 		Ahmed / Morad
+ *
+ *	=================================================================================================
+ *
+ *	lime_skin.css file is divided as the following:
+ *
+ *
+ *     |
+ *	   |-->  [ 1 ] - Color
+ *	   |-->  [ 2 ] - Background
+ *	   |-->  [ 3 ] - Color, Border color and Background
+ *	   |-->  [ 4 ] - Hover Button State
+ *
+ *
+**/
+
+
+
+/** [ 1 ] - Color
+ *	~~~~~~~~~~~~~~~
+ */
+ 	a,
+	.colored,
+	.contact-info ul li a,
+	.contact-info ul li a:focus,
+	.check-list li i,
+	.plan ul li i,
+	#call-to-action h3,
+	.subnav-contact .email-contact a:focus,
+	.subnav-contact .phone-contact a:focus,
+	.logo h5 strong:after,
+	.nav-trigger,
+	.flat-section-title h3:after,
+	.contact-form-title h4:after,
+	#video h1,
+	#header-featured-form i,
+	.video-controls .player-icon,
+	.video-controls .volume-icon,
+	.owl-theme .owl-controls .owl-buttons div,
+	.owl-theme .owl-controls .owl-buttons div:hover,
+	.footer-box h3,
+	.footer-box a:hover,
+ 	.subnav-contact .email-contact a,
+ 	.subnav-contact .phone-contact a,
+	ul.contact-info li i,
+	ul.contact-info li span,
+	.team-profile h5,
+	ul.team-social-media li a:hover,
+	#instagram-feed .icon-overlay i,
+	.portfolio-item-info p,
+	.subnav-social .Languages:hover,
+	.languages-lightbox-content li a:hover h4,
+	.languages-lightbox-content li a:hover,
+	.languages-lightbox-content li a:focus,	
+	.social-icons li a i:hover,
+	ul.contact-info li a:hover {
+		color: #86ba41;
+	}
+
+/******************************/
+
+
+
+/** [ 2 ] - Background
+ *	~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.featured-button,
+	.plan.recommended .head,
+	.single-testmonial i,
+	.subnav-contact .phone-contact i,
+	.subnav-contact .email-contact i,
+	.title-line,
+	.contact-form-title .title-line,
+	.languages-lightbox-title,
+	ul.portfolio-filter li.active a,
+ 	ul.portfolio-filter li a:hover,
+	.more-features-slider .owl-controls .owl-page.active span {
+		background: #86ba41;
+	}
+
+/******************************/
+
+
+
+/** [ 3 ] - Color, Border color and Background 
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	::-moz-selection{
+		background: #86ba41;
+	}
+
+	::selection {
+		background: #86ba41;
+	}
+
+
+	#contact-form input:focus,
+	#contact-form textarea:focus,
+	#contact-form2 input:focus,
+	#contact-form2 textarea:focus,
+	#subscribe-form input:focus {
+		border-color: #86ba41;
+	}
+
+	#contact-form .submit,
+	#contact-form2 .submit,
+	#subscribe-form .submit {
+		background: #86ba41;
+		border-color: #86ba41;
+	}
+
+	.main-menu li a:hover,
+	.main-menu li a.active {
+		border-top-color: #86ba41;
+		color: #86ba41;
+	}
+
+	.nav-trigger:hover {
+		background: #86ba41;
+		border-color: #86ba41;
+	}
+
+/******************************/
+
+
+
+/** [ 4 ] - Hover Button State
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.featured-button:hover,
+	.scroll-top:hover {
+		background: #639a33;
+	}
+
+ 	.subnav-contact .email-contact a:hover,
+ 	.subnav-contact .phone-contact a:hover {
+		color: #639a33;
+ 	}
+
+	#contact-form .submit:hover,
+	#contact-form2 .submit:hover,
+	#subscribe-form .submit:hover {
+		background: #639a33;
+		border-color: #639a33;
+	}
+
+/******************************/

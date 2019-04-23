@@ -1,0 +1,286 @@
+/* =================================================================== */
+/* Styles Switcher
+====================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,300,800,300italic,700italic,800italic);
+#style-switcher
+{
+    position: fixed;
+    z-index: 9999;
+    top: 100px;
+
+    width: 190px;
+    width: 240px;
+
+    -webkit-transition: all .6s ease 0s;
+            transition: all .6s ease 0s;
+    transform: translateX(-100%);
+
+    -webkit-border-radius: 0 0 5px 0;
+       -moz-border-radius: 0 0 5px 0;
+            border-radius: 0 0 5px 0;
+            border-radius: 0 3px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+         -o-border-radius: 0 0 5px 0;
+        -ms-border-radius: 0 0 5px 0;
+    -wibkit-transform: translateX(-100%);
+}
+
+#style-switcher i
+{
+    font-family: 'fontAwesome';
+    font-size: 23px;
+    line-height: 44px;
+
+    position: absolute;
+    top: 60px;
+    right: -45px;
+
+    display: block;
+
+    width: 46px;
+    height: 46px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #000;
+    border: 1px solid #dadada;
+    border-radius: 0 3px 3px 0;
+    background: #fff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, .1);
+}
+
+#style-switcher.show
+{
+    transform: translateX(0%);
+
+    -wibkit-transform: translateX(0%);
+}
+
+#style-switcher h2
+{
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+
+    padding: 0;
+    padding: 0 24px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 0 3px 0 0;
+    background: #000;
+}
+
+#style-switcher h3
+{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+
+    margin: 0 0 12px 0;
+
+    text-transform: uppercase;
+
+    color: #999;
+}
+
+.option_single,
+#reset
+{
+    padding: 26px 24px;
+}
+
+.switcher-container
+{
+    border: 1px solid #dadada;
+}
+
+#style-switcher .option_single
+{
+    border-bottom: 1px solid #dadada;
+}
+
+
+
+.colors
+{
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.colors li
+{
+    float: left;
+
+    margin: 0 5px 5px 0;
+}
+.colors li button
+{
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+    -webkit-transition: all .6s ease 0s;
+            transition: all .6s ease 0s;
+
+    border: none;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+
+         -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+}
+
+.layout-style select
+{
+    font-size: 14px;
+
+    width: 100%;
+    margin: 0 0 0 -5px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: #333;
+    border: none;
+    -webkit-border-radius: 0 0 5px 5px;
+       -moz-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+    background: #f2f2f2;
+
+         -o-border-radius: 0 0 5px 5px;
+        -ms-border-radius: 0 0 5px 5px;
+}
+
+#reset
+{
+    display: block;
+    overflow: hidden;
+
+    margin: 0 auto 15px;
+
+    text-align: center;
+}
+
+button:focus,
+button
+{
+    outline: none !important;
+}
+
+#reset button
+{
+    font-size: 14px;
+
+    padding: 7px 35px;
+
+    -webkit-transition: all .6s ease 0s;
+            transition: all .6s ease 0s;
+
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    background-color: #000;
+
+         -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+}
+#reset button:hover
+{
+    background-color: #555;
+}
+
+.green,
+.green-bg
+{
+    background: #18ba60;
+}
+.blue,
+.blue-bg
+{
+    background: #609ddb;
+}
+.yellow,
+.yellow-bg
+{
+    background: #fcd746;
+}
+.red,
+.red-bg
+{
+    background: #e86343;
+}
+.orange,
+.orange-bg
+{
+    background: #f58b3c;
+}
+.base,
+.base-bg
+{
+    background: #e86343;
+}
+.black,
+.black-bg
+{
+    background: #333;
+}
+.brown,
+.brown-bg
+{
+    background: #8f5340;
+}
+.defauilt,
+.defauilt-bg
+{
+    background: #1abc9c;
+}
+.grey,
+.grey-bg
+{
+    background: #a5b3b4;
+}
+.lime,
+.lime-bg
+{
+    background: #86ba41;
+}
+.purple,
+.purple-bg
+{
+    background: #8463a9;
+}
+.turquoise,
+.turquoise-bg
+{
+    background: #0dc0c0;
+}
+
+.colors li button.active
+{
+    box-shadow: 0 0 0 2px #707070 inset;
+}
+
+@media only screen and (max-width: 768px)
+{
+    #style-switcher
+    {
+        /*display: none;*/
+        top: 50px;
+    }
+}

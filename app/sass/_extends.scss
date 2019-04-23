@@ -1,0 +1,77 @@
+%container {
+  width: 100%;
+  max-width: $width-page;
+  margin: 0 auto;
+
+  @include max-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include max-s {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+%m-container {
+  width: 100%;
+  max-width: $width-page-m;
+  margin: 0 auto;
+
+  @include max-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include max-s {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+%l-container {
+  width: 100%;
+  max-width: $width-page-l;
+  margin: 0 auto;
+
+  @include max-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include max-s {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+%sm-container {
+  width: 100%;
+  max-width: $width-page-sm;
+  margin: 0 auto;
+
+  @include max-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include max-s {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+%inview-init {
+  position: relative;
+  transform: translate(0, 8rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s $cubic4 0s;
+}
+
+%inview-on {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}

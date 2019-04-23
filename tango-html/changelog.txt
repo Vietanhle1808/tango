@@ -1,0 +1,60 @@
+
+CHANGE LOG
+
+
+ :
+************
+=================================================
+V1.0 - 10 February 2016 = NEW : First Release
+=================================================
+V1.1 - 16 February 2016 = NEW : Update
+
+Updates:
+
+ - Sticky Navigation
+ - Scroll To Navigation
+ - Languages Pop-up Window
+ - Instagram Feed With Slider
+
+
+===========================================
+V1.2 - 18 February 2016 = NEW : Update
+
+Updates:
+
+ - Team Section
+ - Animation Text in Header Section
+
+
+===========================================
+V1.3 - 25 February 2016 = NEW : Update
+
+Updates:
+
+ - Click Through Demo
+ - Portfolio Section with Lightbox
+ - Layer Pattern
+
+
+===========================================
+V1.4 - 21 May 2016 = NEW : Update
+
+Updates:
+
+ - Contact Us Section
+ - animation Portfolio Lightbox
+ - Map Section
+ - Back to top Button
+
+
+===========================================
+
+V1.5 - 15 June 2016 = NEW : Update
+
+Updates:
+
+ - PHP Contact form
+ - Fix paralllax bug
+
+
+===========================================

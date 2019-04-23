@@ -1,0 +1,74 @@
+* {
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: $font-weight-default;
+  font-family: $font-body;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark;
+}
+
+main {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: $font-weight-bold;
+  font-size: 3.5rem;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 2.5rem 0;
+  font-weight: $font-weight-regular;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s $cubic3;
+  color: $primary-color;
+  font-size: 1.2rem;
+}
+
+.body-wrapper {
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.is-off {
+  display: none !important;
+}

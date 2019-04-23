@@ -1,0 +1,90 @@
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$primary-color:                 #1f3971;
+$secondary-color:               #f36c24;
+$light:                         #fff;
+$gray-light:                    #f8f8f8;
+$gray:                          #b9b9b9;
+$gray-medium:                   #eeeeee;
+$gray-dark:                     #707070;
+$gray-bold:                     #848484;
+$gray-soft:                     #F2F2F2;
+$dark:                          #1d1d1d;
+$darker:                        #000;
+$blue-banner:                   rgba(12, 24, 47, 0.8);
+$blue-dark:                     #0C182F;
+$blue-darker:                   #3B4557;
+$blue-light:                    #355EAD;
+$blue-soft:                     #BFE2EF;
+$green-dark:                    #005B7C;
+$green:                         #00c500;
+$green-houzz:                         #4dbc15;
+$red:                           red;
+
+$color-facebook:                #3b5998;
+$color-pinterest:               #BB0F24;
+$color-instagram:               #F4AC39;
+$color-twitter:                 #2AA3EF;
+
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-roboto:                   'Roboto';
+
+$font-body:                     $font-roboto, sans-serif;
+$font-title:                    $font-roboto, sans-serif;
+
+$link-font-icon:                '../fonts/icon-moon/';
+
+$font-icon-moon:                'icon';
+
+
+/* Width page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$width-page:                    1088px;
+$width-page-m:                  940px;
+$width-page-l:                  1168px;
+$width-page-sm:                 720px;
+
+
+/* Breakpoint
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$break-xl:                      1280px;
+$break-l:                       1136px; //1136px
+$break-m:                       992px; //992px
+$break-sm:                      768px; //768px
+$break-s:                       480px; //480px
+
+
+/* Font-weight
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-weight-light:             300;
+$font-weight-regular:           400;
+$font-weight-semi-bold:         500;
+$font-weight-bold:              700;
+$font-weight-default:           $font-weight-regular;
+
+
+/* Font-size
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-size-default:             1.6rem;
+$font-size-heading-1:           3.6rem;
+$font-size-heading-2:           2.6rem;
+
+
+/* Gutter
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$gutter:                        1.6rem;
+
+
+/* Transition
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$cubic1:                        cubic-bezier(0.19, 1, 0.22, 1);
+$cubic2:                        cubic-bezier(.48, .48, .57, .57);
+$cubic3:                        cubic-bezier(0.215, 0.61, 0.355, 1);
+$cubic4:                        cubic-bezier(0.4, 0, 0.2, 1);
+
+
+/* Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$button-height:                 4.6rem;

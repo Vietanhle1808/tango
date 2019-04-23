@@ -1,0 +1,2886 @@
+/**
+ *	=================================================================================================
+ *
+ *  [ Main Stylesheet ]
+ *
+ *	Project:		Tango - Responsive Multi-Purpose Landing Page
+ *	Version:		1.5
+ *	First change:	02/10/2016
+ *	Last change:	06/15/2016
+ *	Primary use:	Multi-Purpose Landing Page
+ *	File Name: 		style.css
+ *	Author: 		Ahmed / Morad
+ *	Description:    - This file is containing almost the all basic settings of the template CSS code.
+ *				    - This file is built to be easy for your template to be handled in a quick way.
+ *     		        - For the current file, it's divided as listed below.
+ *
+ *	=================================================================================================
+ *
+ *	style.css file is divided as the following:
+ *
+ *
+ *     |
+ *	   |-->  [ 1 ] - General Basics
+ *     |	 |-->  [ 1.1 ] - Small Reset
+ * 	   |	 |-->  [ 1.2 ] - Body
+ * 	   |	 |-->  [ 1.3 ] - General Links
+ * 	   |	 |-->  [ 1.4 ] - Headings
+ * 	   |	 |-->  [ 1.5 ] - Subheaders
+ * 	   |	 |-->  [ 1.6 ] - Paragraphs
+ * 	   |	 |-->  [ 1.7 ] - Strong
+ * 	   |	 |-->  [ 1.8 ] - Texts Highlighting Selection 
+ * 	   |	 |-->  [ 1.9 ] - Divider Space
+ *     | 
+ *	   |-->  [ 2 ] - Other Miscellaneous
+ *     |	 |-->  [ 2.1 ] - Website Loading
+ * 	   |	 |-->  [ 2.2 ] - Featured Button
+ * 	   |	 |-->  [ 2.3 ] - Back to top Button
+ *     |
+ *	   |-->  [ 3 ] - Header and Navigation
+ *     |	 |-->  [ 3.1 ] - Header Settings
+ * 	   |	 |-->  [ 3.2 ] - Logo & Social Icon
+ *     |	 |-->  [ 3.3 ] - Header Featured Content
+ *     |
+ *	   |-->  [ 4 ] - Main Content
+ *     |	 |-->  [ 4.1 ] - Main Container
+ * 	   |	 |-->  [ 4.2 ] - Flat Section Settings
+ *     |	 |-->  [ 4.3 ] - Parallax Section Settings
+ *     |
+ *	   |-->  [ 5 ] - Form Settings
+ *     |	 |-->  [ 5.1 ] - Form Settings
+ * 	   |	 |-->  [ 5.2 ] - Bottom Form
+ * 	   |	 |-->  [ 5.3 ] - Header Form Settings
+ *     |	 |-->  [ 5.4 ] - Header Form Notification
+ * 	   |	 |-->  [ 5.5 ] - Subscribe Footer Settings
+ * 	   |	 |-->  [ 5.6 ] - Subscribe Footer Result Settings
+ *     |
+ *	   |-->  [ 6 ] - Sections Content
+ *     |	 |-->  [ 6.1 ] - Clients Section and Google Map
+ *     |	 |-->  [ 6.2 ] - Featured Section
+ *     |	 |-->  [ 6.3 ] - What We do Section
+ *     |	 |-->  [ 6.4 ] - What We do Info Section
+ *     |	 |-->  [ 6.5 ] - Our Work Section
+ *     |	 |-->  [ 6.6 ] - Video Section
+ *     |	 |-->  [ 6.7 ] - Team Section
+ *     |	 |-->  [ 6.8 ] - More Features Section
+ *     |	 |-->  [ 6.9 ] - Pricing Table Section
+ *     |	 |-->  [ 6.10] - Call To Action Section
+ *     |	 |-->  [ 6.11] - Testmonials Section
+ *     |	 |-->  [ 6.12] - Contact us Section
+ *     |	 |-->  [ 6.13] - Map Section
+ *     |	 |-->  [ 6.14] - Instagram Section
+ *     |	 |-->  [ 6.15] - Footer Section
+ *     |
+ *	   |-->  [ 7 ] - Media Queries
+ *     |	 |-->  [ 7.1 ] - Width between 1200px to 0
+ * 	   |	 |-->  [ 7.2 ] - Width between 992px to 0
+ *     |	 |-->  [ 7.3 ] - Width between 768px to 0
+ * 	   |	 |-->  [ 7.4 ] - Width between 480px to 0
+ *
+**/
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 1 ] - General Basics
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the general settings that you can change like general
+ *  font-family, color, headings settings, paragraphs, .. etc.
+ *
+ *	------
+ *
+ *  General Basics divided to the following sections:
+ *
+ *	   |
+ *     |-->  [ 1.1 ] - Small Reset 
+ * 	   |-->  [ 1.2 ] - Body 
+ * 	   |-->  [ 1.3 ] - General Links 
+ * 	   |-->  [ 1.4 ] - Headings 
+ * 	   |-->  [ 1.5 ] - Subheaders 
+ * 	   |-->  [ 1.6 ] - Paragraphs 
+ * 	   |-->  [ 1.7 ] - Strong 
+ * 	   |-->  [ 1.8 ] - Texts Highlighting Selection 
+ * 	   |-->  [ 1.9 ] - Divider Space
+ *
+*/
+
+
+
+
+/** [ 1.1 ] - Small Reset
+ *	~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+body, ul, ol, h1,h3,h3,h4,h5,h6,form,li,p,input,select,legend,textarea,fieldset{ margin:0; padding:0;}
+
+
+/**
+ *  [ 1.2 ] - Body
+ *	~~~~~~~~~~~~~~
+ */
+
+	body {
+		width: 100%;
+		position: relative;
+		font-size: 14px;
+		font-family: 'Open Sans', sans-serif;
+		line-height: 22px;
+		background: #fff;
+		color: #777;
+	}
+
+	#full-container {
+		display: block;
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+/******************************/
+
+
+
+/** [ 1.3 ] - General Links
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	a, a img {
+		outline: none !important;
+		border: none;
+	}
+
+	iframe {
+		border: none;
+	}
+
+	a {
+		text-decoration: none;
+		-wibkit-transition: all 0.2s ease 0s;
+				transition: all 0.2s ease 0s;
+	}
+
+	a:hover {
+		color: #222;
+		text-decoration: none;
+	}
+
+	a:focus {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	p a {
+		border-bottom: 1px dotted transparent;
+	}
+
+	p a:hover {
+		text-decoration: none;
+		border-bottom: 1px dotted #222;
+	}
+
+	input:focus,
+	textarea:focus,
+	input {
+		outline: none !important;
+	}
+
+/******************************/
+
+
+
+/** [ 1.4 ] - Headings
+ *	~~~~~~~~~~~~~~~~~~
+ */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "montserrat", sans-serif;
+		color: #333;
+		font-weight: 400;
+		letter-spacing: 0.1px;
+		display: block;
+		margin: 0;
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 40px;
+		line-height: 106%;
+		padding-bottom: 15px;
+	}
+
+	h2 {
+		font-size: 33px;
+		line-height: 106%;
+		padding-bottom: 15px;
+	}
+
+	h3 {
+		font-size: 26px;
+		line-height: 108%;
+		padding-bottom: 13px;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 110%;
+		padding-bottom: 10px;
+	}
+
+	h5 {
+		font-size: 15px;
+		line-height: 110%;
+		padding-bottom: 12px;
+	}
+
+	h6 {
+		font-size: 13px;
+		line-height: 110%;
+		padding-bottom: 12px;
+	}
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		text-decoration: none;
+		color: #333;
+	}
+
+	h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+		color: #222;
+	}
+
+	h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+		font-weight: 700;
+	}
+
+	h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+		font-size: 60%;
+		color: #777;
+		line-height: 0;
+	}
+
+/******************************/
+
+
+
+/** [ 1.5 ] - Subheaders
+ *	~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.subheader {
+		display: block;
+		color: #666;
+		margin-bottom: 0;
+		font-weight: 200;
+		margin-top: -8px;
+		padding-bottom: 20px;
+	}
+
+	h5.subheader, h6.subheader {
+		font-weight: 400;
+	}
+
+/******************************/
+
+
+
+/** [ 1.6 ] - Paragraphs
+ *	~~~~~~~~~~~~~~~~~~~~
+ */
+
+	p {
+		padding-bottom: 10px;
+	}
+
+	p.paragraph-justify {
+		text-align: justify;
+	}
+
+/******************************/
+
+
+
+/** [ 1.7 ] - Strong
+ *	~~~~~~~~~~~~~~~~
+ */
+
+	strong {
+		color: #222;
+		font-weight: 700;
+	}
+
+/******************************/
+
+
+
+/** [ 1.8 ] - Texts Highlighting Selection
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	::-moz-selection{
+		color: #fff;
+	}
+
+	::selection {
+		color: #fff;
+	}
+
+/******************************/
+
+
+
+/** [ 1.9 ] - Divider Space
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	.divider-space {
+		display: block;
+		overflow: hidden;
+		clear: both;	
+	}
+
+/******************************/
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 2 ] - Other Miscellaneous
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the Website Loading element and Featured Button .. etc.
+ *
+ *	------
+ *
+ *  Others Miscellaneous divided to the following sections:
+ *
+ *	   |
+ *	   |-->  [ 2.1 ] - Website Loading
+ *	   |-->  [ 2.2 ] - Featured Button
+ *	   |-->  [ 2.3 ] - Back to top Button
+ *
+*/
+
+
+
+/** [ 2.1 ] - Website Loading
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#website-loading {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #f5f5f5;
+		z-index: 9999999999;
+		text-align: center;
+		display: block;
+	}
+
+	.loading-effect {
+	    position: absolute;
+	    width: 62px;
+	    left: 50%;
+	    top: 50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    		transform: translate(-50%, -50%);
+	}
+
+	.loading-effect > div {
+	    position: absolute;
+	    width: 10px;
+	    height: 10px;
+	    background: #666666;
+	    opacity: 0.5;
+	    border-radius: 20px;
+	    -webkit-animation: snake 1s infinite ease-in-out;
+	    	    animation: snake 1s infinite ease-in-out;
+	}
+
+	.loading-effect > div:nth-child(2) {
+	    left: 13px;
+	    -webkit-animation-delay: .2s;
+	    		animation-delay: .2s;
+	}
+
+	.loading-effect > div:nth-child(3) {
+	    left: 26px;
+	    -webkit-animation-delay: .4s;
+	    		animation-delay: .4s;
+	}
+
+	.loading-effect > div:nth-child(4) {
+	    left: 39px;
+	    -webkit-animation-delay: .6s;
+	    		animation-delay: .6s;
+	}
+
+	.loading-effect > div:nth-child(5) {
+	    left: 52px;
+	    -webkit-animation-delay: .8s;
+	    		animation-delay: .8s;
+	}	
+
+	@-webkit-keyframes snake {
+	    0% {
+	        opacity: 0.3;
+	        -webkit-transform: translateY(0px);
+	        -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+	    }
+	    50% {
+	        background: #333333;
+	        -webkit-transform: translateY(-10px);
+	        -webkit-box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);
+	    }
+	    100% {
+	        opacity: 0.3;
+	        -webkit-transform: translateY(0px);
+	        -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+	    }
+	}
+
+	@keyframes snake {
+	    0% {
+	        opacity: 0.3;
+	        -webkit-transform: translateY(0px);
+	                transform: translateY(0px);
+	        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+	    }
+	    50% {
+	        background: #333333;
+	        -webkit-transform: translateY(-10px);
+	                transform: translateY(-10px);
+	        box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);
+	    }
+	    100% {
+	        opacity: 0.3;
+	        -webkit-transform: translateY(0px);
+	                transform: translateY(0px);
+	        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+	    }
+	}
+
+/******************************/
+
+
+
+/** [ 2.2 ] - Featured Button
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.featured-button {
+		padding: 20px 40px;
+		color: #fff;
+		font-size: 14px;
+		border-radius: 3px;
+		font-weight: 400;
+		font-family: "montserrat";
+		display: inline-block;
+	}
+
+	.featured-button:hover {
+		color: #fff;
+	}
+
+/******************************/
+
+
+
+/** [ 2.3 ] - Back to top Button
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.scroll-top {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: #fff;
+		background: #1c1c1c;
+		font-size: 18px;
+		position: fixed;
+		opacity: 0;
+		right: 40px;
+		bottom: -55px;
+		z-index: 999;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: 0.1s;
+	}
+
+	.scroll-top.active {
+		bottom: 40px;
+		opacity: 1;
+	}
+
+/******************************/
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 3 ] - Header and Navigation
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the logo and navigation settings and the settings
+ *  of the options of using the header with parallax effect. 
+ *
+ *	------
+ *
+ *  Header divided to the following sections:
+ *
+ *	   |
+ *	   |-->  [ 3.1 ] - Header Settings
+ *	   |-->  [ 3.2 ] - Logo & Social Icon
+ *	   |-->  [ 3.3 ] - Header Featured Content
+ *
+ */
+
+
+
+/** [ 3.1 ] - Header Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	header {
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+
+	.header-parallax {
+		background-image: url("../images/files/parallax-background-images/image3.jpg");
+		background-color: #ccc;
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+
+/******************************/
+
+
+
+/** [ 3.2 ] - Logo & Social Icon
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	/* sub nav */
+
+ 	.sub-nav {
+ 		background: #1c1c1c;
+ 		height: 48px;
+ 	}
+
+ 	.subnav-contact {
+ 		position: relative;
+ 		height: 48px;
+ 		font-size: 0;
+ 	}
+
+ 	.subnav-contact .phone-contact,
+ 	.subnav-contact .email-contact {
+ 		line-height: 29px;
+ 		position: relative;
+ 		display: inline-block;
+ 		font-size: 13px;
+ 		margin: 10px 15px 0 0;
+ 		color: #ccc;
+		font-family: "montserrat", sans-serif;
+		font-weight: 400;
+ 	}
+
+ 	.subnav-contact .phone-contact i,
+ 	.subnav-contact .email-contact i {
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+		color: #fff;
+		font-size: 14px;
+		height: 28px;
+		width: 28px;
+		text-align: center;
+		line-height: 28px;
+		border-radius: 2px;
+		margin: 0 5px -9px 0;
+		cursor: default;
+ 	}
+
+ 	.subnav-contact .phone-contact small,
+ 	.subnav-contact .email-contact small {
+ 		font-size: 13px;
+ 		color: #999;
+		font-family: "montserrat", sans-serif;
+		font-weight: 400;
+ 	}
+
+	/* subnav social*/
+
+	.subnav-social {
+		float: right;
+		text-align: right;
+		width: 100%;
+		font-size: 0;
+	}
+
+	.subnav-social .social-icons {
+		position: relative;
+		list-style: none;
+		margin-left: 5px;
+		font-size: 0;
+		display: inline-block;
+	}
+
+	.social-icons li {
+		display: inline-block;
+		border-right: 1px solid #292929;
+	}
+
+	ul.social-icons li:first-child {
+		border-left: 1px solid #292929;
+	}
+
+	.social-icons li a {
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+	}
+
+	.social-icons li a i {
+		line-height: 48px;
+		height: 48px;
+		width: 48px;
+		opacity: 0.5;
+		font-size: 16px;
+		color: #999;
+		text-align: center;
+		transition: all 0.2s ease;
+	}
+
+	.social-icons li a i:hover {
+		opacity: 1;
+		background: #1f1f1f;
+	}
+
+ 	.subnav-social .Languages {
+ 		font-size: 13px;
+ 		color: #999;
+		font-family: "montserrat", sans-serif;
+		font-weight: 400;
+		margin-right: 5px;
+		position: relative;
+		top: -1px;
+ 	}
+
+	/* Styles for Languages lightbox */
+
+	.languages-lightbox {
+		position: relative;
+		margin: 40px auto;
+		max-width: 350px;
+		text-align: left;
+	}
+
+	.languages-lightbox-title {
+		border-radius: 3px 3px 0 0;
+	}
+
+	.languages-lightbox-title h3 {
+		font-size: 18px;
+		color: #fff;
+		font-family: "montserrat", sans-serif;
+		padding: 25px;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+		text-align: center;
+	}
+
+	.languages-lightbox-content {
+		list-style: none;
+		background: #1c1c1c
+	}
+
+	.languages-lightbox-content li h4 {
+		color: #999;
+		font-size: 13px;
+		display: inline;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+	.languages-lightbox-content li a {
+		padding: 18px 25px;
+		display: block;
+		border-bottom: 1px solid #292929;
+	}
+
+	.languages-lightbox-content li:last-child a {
+		border-bottom: none;
+	}
+
+	.languages-lightbox-content li a:hover {
+		background: #1f1f1f;
+	}
+
+	.languages-lightbox-content li i {
+	    line-height: 20px;
+	    position: absolute;
+	    right: 25px;
+	}
+
+	/*Languages lightbox zoom animation*/
+
+	/* start state */
+	.zoom-effect .languages-lightbox {
+		opacity: 0;
+		transition: all 0.2s ease-in-out; 
+		-webkit-transform: scale(0.8); 
+		        transform: scale(0.8); 
+	}
+
+	/* animate in */
+	.zoom-effect.mfp-ready .languages-lightbox {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		        transform: scale(1); 
+	}
+
+	/* animate out */
+	.zoom-effect.mfp-removing .languages-lightbox {
+		-webkit-transform: scale(0.8);
+		        transform: scale(0.8);
+		opacity: 0;
+	}
+
+	/* Dark overlay, start state */
+	.zoom-effect.mfp-bg {
+		opacity: 0;
+		transition: all 0.3s ease-out;
+	}
+
+	/* animate in */
+	.zoom-effect.mfp-ready.mfp-bg {
+		opacity: 0.8;
+	}
+
+	/* animate out */
+	.zoom-effect.mfp-removing.mfp-bg {
+		opacity: 0;
+	}
+
+ 	/* main nav */
+
+	.main-nav {
+		height: 100px;
+		position: relative;
+		background-color: #fff;
+		display: block;
+		z-index: 9;
+	}
+
+	.logo {
+		position: absolute;
+		height: 100px;
+		overflow: hidden;
+		float: left;
+	}
+
+	.logo img {
+		max-height: 100%;
+		padding-right: 10px;
+		position: absolute;
+		margin-top: 30px;
+	}
+
+	.logo h5 {
+		color: #000;
+		font-size: 18px;
+		font-family: "montserrat";
+	    position: relative;
+	    margin-top: 34px;
+	    width: auto;
+	}
+
+	.logo p {
+		color: #999;
+		font-size: 11px;
+		line-height: 18px;
+	}
+
+	.logo h5, .logo p {
+		margin-left: 35px;
+	    padding-bottom: 0;
+	}
+
+	.logo h5 strong:after {
+		content: ".";
+		font-size: 25px;
+		line-height: 0;
+		border-radius: 50%;
+	}
+
+	/*main menu*/
+
+	.main-menu {
+		float: right;
+		list-style: outside none;
+		position: relative;
+		font-size: 0;
+	}
+
+	.main-menu li {
+		position: relative;
+		margin-left: 4px;
+		margin-top: -4px;
+		display: inline-block;
+	}
+
+	.main-menu li a:hover,
+	.main-menu li a.active {
+		background-color: #f5f5f5;
+		border-top: 4px solid;
+	}
+
+	.main-menu li a {
+		padding: 39px 18px;
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		color: #444;
+		font-family: "montserrat";
+		border-top: 4px solid rgba(0,0,0,0);
+		transition: all 0.4s ease;
+	}
+
+	/* Mobile Navigation */
+
+	.nav-trigger {
+		position: relative;
+		background: #f5f5f5;
+		padding: 10px 15px;
+		right: 0;
+		display: inline-block;
+		display: none;
+		float: right;
+		margin-top: 28px;
+		border-radius: 2px;
+		border: 1px solid #f0f0f0;
+		font-size: 17px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.nav-trigger:hover {
+		color: #fff;
+		border: 1px solid;
+	}
+
+	/* Mobile Navigation */
+
+	.nav-mobile {
+		position: relative;
+		display: block;
+		top: 100px;
+		z-index: 2;
+		display: none;
+	}
+
+	.nav-mobile ul {
+		display: none;
+		list-style-type: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		overflow: auto;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.nav-mobile li {
+		display: block;
+		border-bottom: solid 1px #f0f0f0;
+		margin-left: 0;
+		margin-top: -1px;
+		background: #1c1c1c;
+	}
+
+	.nav-mobile li:first-child {
+		margin-top: 0;
+	}
+
+	.nav-mobile li:last-child {
+		border-bottom: none;
+	}
+
+	.nav-mobile .main-menu li a {
+		color: #999;
+	}
+
+	.nav-mobile .main-menu li a,
+	.nav-mobile .main-menu li a:hover,
+	.nav-mobile .main-menu li.active a {
+		border-top: 1px solid #292929 !important;
+		display: block;
+		padding: 15px 18px;
+	}
+
+	.nav-mobile .main-menu li a:hover,
+	.nav-mobile .main-menu li a.active {
+		background: #1f1f1f;
+	}
+
+	/* sticky navigation */
+
+	.sticky-wrapper.is-sticky .main-nav {
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	}
+	
+/******************************/
+
+
+
+/** [ 3.3 ] - Header Featured Content
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.header-featured-content {
+		display: block;
+		position: relative;
+		padding: 0;
+		min-height: 500px;
+		transition: all 0.5s;
+	}
+
+	.header-featured-inner-content {
+		display: table;
+		width: 100%;
+		height: 100%;
+		padding: 200px 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.header-featured-centered-content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.header-featured-inner-content h1 {
+		color: #fff;
+		font-size: 45px;
+		display: inline-block;
+		line-height: 66px;
+		font-weight: 400;
+		padding-bottom: 5px;
+	}
+
+	.header-featured-inner-content h1 strong {
+		font-weight: 400;
+	}
+
+	.tlt1 span,
+	.tlt2 span {
+		font-weight: 400;
+		padding-bottom: 4px;
+		color: #fff;
+		font-size: 45px;
+		display: inline-block;
+		line-height: 66px;
+		font-weight: 400;
+		font-family: "montserrat";
+	}
+
+	.header-featured-inner-content p {
+		color: #fff;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		padding-bottom: 30px;
+		margin: auto;
+	}
+
+/******************************/
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 4 ] - Main Content
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the the main container settings. Also the general
+ *  settings for flat section and parallax section.
+ *
+ *	------
+ *
+ *  Main content divided to the following sections:
+ *
+ *	   |
+ *	   |-->  [ 4.1 ] - Main Container
+ *	   |-->  [ 4.2 ] - Flat Section Settings
+ *	   |-->  [ 4.3 ] - Parallax Section Settings
+ *
+ */
+
+
+
+/** [ 4.1 ] - Main Container
+ *	~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#main-container {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	#main {
+		display: block;
+		position: relative;
+	}
+
+/******************************/
+
+
+
+/** [ 4.2 ] - Flat Section Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.flat-section {
+		display: block;
+		width: 100%;
+		padding: 90px 0;
+		position: relative;
+	}
+
+	/* Flat Section Title */
+
+	.flat-section-title {
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding-bottom: 65px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.flat-section-title h3 {
+		font-size: 34px;
+		padding-bottom: 15px;
+		font-weight: 400;
+		color: #333;
+	}
+
+	.flat-section-title p {
+		font-size: 16px;
+		color: #777;
+		font-weight: 400;
+		width: 70%;
+		margin: auto;
+		line-height: 24px;
+	}
+
+	.title-line {
+		width: 60px;
+		height: 5px;
+		margin: 10px auto;
+	}
+
+	.flat-section-title h3:after,
+	.contact-form-title h4:after {
+		content: ".";
+		font-size: 40px;
+		line-height: 0;
+		border-radius: 50%;
+	}
+
+	/* Flat Section Content */
+
+	.flat-section-content {
+		display: block;
+		width: 100%;
+		position: relative;
+	}
+
+	/* Grey Background */
+
+	.grey-background {
+		background: #f5f5f5;
+	}
+
+/******************************/
+
+
+
+/** [ 4.3 ] - Parallax Section Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.parallax-section {
+		background-image: url("../images/files/parallax-background-images/image5.jpg");
+		background-color: #ccc;
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		height: 100%;
+		position: relative;
+	}
+
+	.parallax-section-content {
+		display: block;
+		width: 100%;
+		padding: 140px 0;
+		position: relative;
+		text-align: center;
+		z-index: 1;
+	}
+
+	/* pattern overlay  */
+
+	.pattern-overlay {
+	    background-color: rgba(0, 0, 0, 0.85);
+	    background-image: url("../images/general-elements/pattern-overlay.png");
+	    background-position: left top;
+	    background-repeat: repeat;
+	    height: 100%;
+	    position: absolute;
+	    width: 100%;
+	    z-index: 1;
+	}
+
+	/* Color Overlay */
+
+	.color-overlay {
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+	}
+
+/******************************/
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 5 ] - Form Settings
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the the use of Lead gen form in header and MailChimp
+ *  Subscribe form.
+ *
+ *	------
+ *
+ *  Main content divided to the following sections:
+ *
+ *	   |
+ *	   |-->  [ 5.1 ] - Form Settings
+ *	   |-->  [ 5.2 ] - Bottom Form
+ *	   |-->  [ 5.3 ] - Header Form Settings
+ *	   |-->  [ 5.4 ] - Header Form Notification
+ *	   |-->  [ 5.5 ] - Subscribe Footer Settings
+ *	   |-->  [ 5.6 ] - Subscribe Footer Result Settings
+ *
+ */
+
+
+/** [ 5.1 ] - Form Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#contact-form .form-group {
+		text-align: left;
+		padding-bottom: 20px;	
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	#contact-form input,
+	#contact-form textarea {
+		font-size: 12px;
+		color: #999;
+		display: block;
+		width: 100%;
+		border: 1px solid transparent;
+		padding: 12px 15px;
+		background: rgba(0, 0, 0, 0.3);
+		height: auto;
+		box-shadow: none;
+		letter-spacing: 1px;
+		transition: all 0.4s ease 0s;
+	}
+
+	#contact-form textarea {
+		height: 120px;
+	}
+
+	#contact-form input.error,
+	#contact-form textarea.error {
+		border-color: #e74c3c;
+	}
+
+	#contact-form .submit {
+		font-size: 12px;
+		color: #fff;
+		padding: 12px 25px;
+		font-weight: 400;
+		width: auto;
+		letter-spacing: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	/* Form Small Text */
+
+	#contact-form small {
+		color: #777;
+		font-size: 12px;
+	}
+
+	/* Input Error Message */
+
+	#contact-form label.error {
+	    font-size: 10px;
+	    margin: 0 !important;
+	    color: #e74c3c;
+	    line-height: 15px;
+	    display: none !important;
+	}
+
+
+/******************************/
+
+
+
+/** [ 5.2 ] - Bottom form 
+ *	~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#contact-form2 .form-group {
+		text-align: left;
+		padding-bottom: 20px;	
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	#contact-form2 input,
+	#contact-form2 textarea {
+		font-size: 12px;
+		color: #333;
+		display: block;
+		width: 100%;
+		border: 1px solid #e6e6e6;
+		padding: 12px 15px;
+		background: #f5f5f5;
+		height: auto;
+		box-shadow: none;
+		letter-spacing: 1px;
+		transition: all 0.4s ease 0s;
+	}
+
+	#contact-form2 textarea {
+		height: 185px;
+	}
+
+	#contact-form2 input.error,
+	#contact-form2 textarea.error {
+		border-color: #e74c3c;
+	}
+
+	#contact-form2 .submit {
+		font-size: 12px;
+		color: #fff;
+		padding: 12px 25px;
+		font-weight: 400;
+		width: auto;
+		left: 50%;
+		position: relative;
+		letter-spacing: 0;
+		margin-top: 15px;
+		transition: all 0.2s ease 0s;
+		-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+	}
+
+
+	/* Input Error Message */
+
+	#contact-form2 label.error {
+	    font-size: 11px;
+	    margin: 0 !important;
+	    color: #e74c3c;
+	    line-height: 15px;
+	}
+
+	label {
+	    display: inline-block;
+	    font-weight: 500;
+	    margin-bottom: 5px;
+	    max-width: 100%;
+	}
+
+
+/******************************/
+
+
+
+/** [ 5.3 ] - Header Form Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#header-featured-form {
+		background: url("../images/general-elements/phone.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		width: 370px;
+		height: 781px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		position: absolute;
+		top: -670px;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.contact-form-container {
+		width: 333px;
+		height: 597px;
+		position: relative;
+		left: 18px;
+		top: 85px;
+		padding: 45px 20px;
+		overflow: hidden;
+	}
+
+	.contact-form-title h4 {
+		font-size: 25px;
+		color: #fff;
+		font-weight: 400;
+	}
+
+	.contact-form-title .title-line {
+		width: 60px;
+		height: 5px;
+		margin: 10px auto;
+	}
+
+	.contact-form-container .contact-form-title span {
+		font-size: 14px;
+		color: #777;
+	}
+
+	#contact-form {
+		padding-top: 40px;
+	}
+
+
+/******************************/
+
+
+
+/** [ 5.4 ] - Form Notification
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#msgSubmit {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		width: 370px;
+	    background: #fff;
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	    padding: 25px 20px;
+	    z-index: 999;
+	}
+
+	#msgSubmit img {
+	    border-radius: 50%;
+	    position: absolute;
+	    left: 20px;
+	    width: 65px;
+	}
+
+	#msgSubmit h5 {
+	    font-size: 15px;
+	    color: #777;
+	    line-height: 23px;
+	    font-weight: 500;
+	    padding-bottom: 8px;
+	}
+
+	#msgSubmit p {
+	    font-size: 12px;
+	    color: #777;
+	    line-height: 18px;
+	    font-weight: 400;
+	    font-style: italic;
+	    padding-bottom: 0;
+	}
+
+	#msgSubmit h5, #msgSubmit p {
+	    padding-left: 80px;
+	    text-align: left;
+	}
+
+	#msgSubmit i {
+	    font-size: 14px;
+	    color: #999;
+	    position: absolute;
+	    right: 15px;
+	    top: 15px;
+	    line-height: 10px;
+	    font-family: "Fontawesome";
+	    cursor: pointer;
+		transition: all 0.2s ease 0s;
+	}
+
+	#msgSubmit i:hover {
+		color: #c75c5c;
+	}
+
+	.hidden-form {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	/* Appearing Submit Result Message */
+
+	.appearing-delay {
+		-webkit-animation-delay: 1s;
+				animation-delay: 1s;
+	}
+
+
+/******************************/
+
+
+
+/** [ 5.5 ] - Subscribe Footer Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#subscribe-form .form-group {
+		text-align: left;
+		padding-bottom: 20px;	
+		position: relative;
+		margin-bottom: 0;
+		padding-top: 20px;
+	}
+
+	#subscribe-form input {
+		font-size: 12px;
+		color: #999;
+		display: block;
+		width: 100%;
+		border: 1px solid transparent;
+		padding: 12px 15px;
+		background: rgba(255,255,255,0.05);
+		height: auto;
+		box-shadow: none;
+		letter-spacing: 1px;
+		transition: all 0.4s ease 0s;
+	}
+
+	#subscribe-form input.error {
+		border-color: #e74c3c;
+	}
+
+	#subscribe-form .submit {
+		font-size: 12px;
+		color: #fff;
+		padding: 12px 25px;
+		font-weight: 400;
+		width: auto;
+		letter-spacing: 0;
+		transition: all 0.2s ease 0s;
+		margin-top: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+
+/******************************/
+
+
+
+/** [ 5.6 ] - Subscribe Footer Result Settings
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.subscribe-result {
+		display: none;
+		text-align: left;
+	}
+
+	.subscribe-result .error, 
+	.subscribe-result .success {
+		padding: 10px 15px;
+		text-align: left;
+		border-radius: 2px;
+		font-size: 13px;
+		line-height: 21px;
+		margin-top: 10px;
+		display: inline-block;
+		position: relative;
+	}
+
+	.subscribe-result .error {
+	    background: #ffedee;
+	    border: 1px solid #e7abad;
+	    color: #ab3438;
+	}
+
+	.subscribe-result .success {
+		background: #dff0d8;
+		border: 1px solid #afe09d;
+		color: #468847;
+	}
+
+	.subscribe-result .fa {
+	    border-radius: 3px 0 0 3px;
+	    font-family: "FontAwesome";
+	    font-size: 20px;
+	    height: 100%;
+	    left: 0;
+	    line-height: 44px;
+	    position: absolute;
+	    text-align: center;
+	    top: 0;
+	    width: 50px;
+	}
+
+	.subscribe-result .error .fa-warning {
+		background: #ffd6d7;
+	    color: #ab3438;
+	}
+
+	.subscribe-result .success .fa-check {
+		background: #B2D6A4;
+		color: #468847;
+	}
+
+
+/******************************/
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	[ 6 ] - Sections Content
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the sections content like clients, featured, call to action,
+ *  testmonials, ... etc.
+ *
+ *	------
+ *
+ *  Main content divided to the following sections:
+ *
+ *	   |
+ *     |-->  |-->  [ 6.1 ] - Clients Section and Google Map
+ *     |-->  |-->  [ 6.2 ] - Featured Section
+ *     |-->  |-->  [ 6.3 ] - What We do Section
+ *     |-->  |-->  [ 6.4 ] - What We do Info Section
+ *     |-->  |-->  [ 6.5 ] - Our Work Section
+ *     |-->  |-->  [ 6.6 ] - Video Section
+ *     |-->  |-->  [ 6.7 ] - Team Section
+ *     |-->  |-->  [ 6.8 ] - More Features Section
+ *     |-->  |-->  [ 6.9 ] - Pricing Table Section
+ *     |-->  |-->  [ 6.10] - Call To Action Section
+ *     |-->  |-->  [ 6.11] - Testmonials Section
+ *     |-->  |-->  [ 6.12] - Contact us Section
+ *     |-->  |-->  [ 6.13] - Map Section
+ *     |-->  |-->  [ 6.14] - Instagram Section
+ *     |-->  |-->  [ 6.15] - Footer Section
+ *
+ */
+
+
+/** [ 6.1 ] - Clients Section and Google Map
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#clients-section {
+		padding: 55px 0;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.clients {
+		display: block;
+		list-style: outside none;
+	}
+
+	.clients li {
+		display: block;
+		width: 100%;
+		height: auto;
+		opacity: 0.5;
+		transition: all 0.2s ease;
+	}
+
+	.clients li:hover {
+		opacity: 1;
+	}
+
+	.clients li a img {
+		max-width: 100%
+	}
+
+	/* Google Map */
+
+	.location {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		visibility: hidden;
+		z-index: 2;
+		-webkit-transform: translateY(-100%);
+				transform: translateY(-100%);
+			  	transition: all 0.8s ease 0s;
+	}
+
+	.location #map {
+		height: 100%;
+		width: 100%;
+	}
+
+	#header-featured-form .show-map {
+		visibility: visible;
+		-webkit-transform: translateY(0);
+				transform: translateY(0);		
+	}
+
+	/* Map icon */
+
+	#header-featured-form i {
+		font-size: 30px;
+	    font-family: "FontAwesome";
+	    position: relative;
+	    margin-top: 105px;
+	    cursor: default;
+  	}
+
+
+/******************************/
+
+
+
+
+/** [ 6.2 ] - Featured Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#our-features .flat-section-content {
+		padding: 0 15px;
+	}
+
+	#our-features .flat-section-content .col-md-4{
+		padding: 0;
+	}
+
+	.info-box-1 {
+		padding: 60px 30px;
+		background: #fff;
+		border: 1px solid #f0f0f0;
+		text-align: center;
+		margin: 0 -1px -1px 0;
+	}
+
+	.info-box-1 img {
+		margin-bottom: 20px;
+		width: 80px;
+		height: 80px;
+		box-shadow: 0 4px 4px #ccc;
+		border-radius: 50%;
+	}
+
+	.info-box-1 h3 {
+		font-size: 18px;
+		line-height: 27px;
+		font-weight: 400;
+		color: #555;
+	}
+
+	.info-box-1 p {
+		font-size: 14px;
+		line-height: 21px;
+		color: #999;
+		padding-bottom: 0;
+	}
+
+
+/******************************/
+
+
+
+/** [ 6.3 ] - What We do Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	#what-we-do.flat-section {
+ 		padding-bottom: 0;
+ 	}
+
+ 	#what-we-do img {
+ 		display: block;
+ 		max-width: 100%;
+ 		margin: auto;
+ 		position: relative;
+ 		z-index: 1;
+ 		margin-bottom: -100px;
+	}
+
+
+/******************************/
+
+
+
+
+/** [ 6.4 ] - What We do Info Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	#what-we-do-info.flat-section {
+ 		padding-top: 150px;
+ 	}
+
+	.info-box-2 {
+		position: relative;
+	}
+
+	.info-box-2 img {
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		left: 0;
+		display: inline-block;
+		box-shadow: 0 4px 4px #ccc;
+		border-radius: 50%;
+	}
+
+	.info-box-2 h3 {
+		font-size: 18px;
+		line-height: 27px;
+		font-weight: 400;
+		color: #555;
+		padding-bottom: 10px;
+	}
+
+	.info-box-2 p {
+		font-size: 14px;
+		line-height: 21px;
+		color: #999;
+		padding-bottom: 0;
+	}
+
+	.info-box-2 h3, .info-box-2 p {
+		padding-left: 90px;
+	}
+
+
+/******************************/
+
+
+
+
+/** [ 6.5 ] - Our Work Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	ul.portfolio-filter {
+ 		list-style: none;
+ 		text-align: center;
+ 		font-size: 0;
+ 		margin-bottom: 50px;
+
+ 	}
+
+ 	ul.portfolio-filter li {
+ 		display: inline-block;
+ 		margin-bottom: 5px;
+ 		margin-right: 20px;
+ 	}
+
+ 	ul.portfolio-filter li:last-child {
+ 		margin-right: 0;
+ 	}
+
+ 	ul.portfolio-filter li.active a,
+ 	ul.portfolio-filter li a:hover {
+		color: #fff; 		
+ 	}
+
+ 	ul.portfolio-filter li a {
+	 	display: block;
+	 	background: #f5f5f5;
+	    border-radius: 4px;
+	    color: #222222;
+		font-family: "montserrat", sans-serif;
+	    font-size: 12px;
+	    line-height: 20px;
+	    padding: 10px 22px;
+	    text-transform: uppercase;
+	    transition: all 0.3s;
+ 	}
+
+ 	ul.portfolio-items-list {
+ 		list-style: none;
+ 		text-align: center;
+ 		font-size: 0;
+ 		overflow: hidden;
+ 		margin-bottom: -30px;
+ 	}
+
+ 	#load-more {
+ 		position: relative;
+ 		left: 50%;
+ 		-webkit-transform: translateX(-50%);
+ 		        transform: translateX(-50%);
+ 	}
+
+ 	.portfolio-item {
+ 		position: relative;
+ 		margin-bottom: 30px;
+ 		overflow: hidden;
+ 	}
+
+	.portfolio-item .portfolio-lightbox {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		opacity: 0;
+	    transition: all 0.3s;
+	}
+
+	.portfolio-item-info {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);	
+	}
+
+	.portfolio-item-info i {
+		color: #fff;
+	    font-family: "Fontawesome";
+	    font-size: 30px;
+	    margin-bottom: 10px;
+		opacity: 0;
+	    margin-top: 40px;
+	}
+
+	.portfolio-item-info h4 {
+		font-size: 17px;
+		color: #fff;
+		font-family: "montserrat", sans-serif;
+		line-height: 1.5;
+		padding: 0;
+		opacity: 0;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	.portfolio-item-info p {
+		font-size: 14px;
+		opacity: 0;
+	}
+
+	.portfolio-item:hover .portfolio-lightbox {
+		opacity: 1;
+	}
+
+	.portfolio-item:hover .portfolio-item-info i {
+		margin-top: 0;
+		opacity: 1;
+		transition: all 0.3s ease 0.2s;
+	}
+
+	.portfolio-item:hover .portfolio-item-info h4 {
+		opacity: 1;
+		transition: all 0.3s ease 0.5s;
+	}
+
+	.portfolio-item:hover .portfolio-item-info p {
+		opacity: 1;
+		transition: all 0.3s ease 0.8s;
+	}
+
+
+/******************************/
+
+
+
+
+/** [ 6.6 ] - Video Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#video h1 {
+		font-size: 45px;
+		display: inline-block;
+		line-height: 66px;
+		font-weight: 400;
+	}
+
+	#video p {
+		color: #fff;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 400;
+		margin: auto;
+		width: 70%;
+	}
+
+	#video h1, 
+	#video p {
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+
+	#video h1.show-effect, 
+	#video p.show-effect {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.video-controls {
+		position: absolute;
+		bottom: 0;
+		display: inline-block;
+		left: 50%;
+		margin-left: -38px;
+		text-align: center;
+		font-size: 0;
+		z-index: 1;
+	}
+
+	.video-controls .player-icon,
+	.video-controls .volume-icon {
+		font-size: 15px;
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	.video-controls .player-icon {
+		margin-right: 5px;
+	}
+
+	.video-controls .player-icon i,
+	.video-controls .volume-icon i {
+		line-height: 35px;
+		width: 100%;
+	}
+	
+
+/******************************/
+
+
+
+/** [ 6.7 ] - Team Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	#team.flat-section {
+ 		padding-bottom: 0;
+ 	}
+
+ 	.team-person {
+ 		text-align: center;
+ 		position: relative;
+ 	}
+
+ 	.team-person img {
+ 		max-width: 100%;
+ 		height: auto;
+	    transition: all 0.5s;
+		-webkit-filter: grayscale(1);
+				filter: grayscale(1);
+ 	}
+
+ 	.team-person .team-profile {
+ 		position: absolute;
+ 		background: #1f1f1f;
+ 		bottom: 0;
+ 		padding: 40px 35px 35px;
+ 		text-align: left;
+ 		color: #999;
+ 		left: 15px;
+ 		right: 15px;
+ 		margin-bottom: -10px;
+ 		opacity: 0;
+ 		visibility: hidden;
+ 		transition: all 0.5s;
+ 	}
+
+ 	.team-person:hover .team-profile {
+ 		margin: 0;
+ 		opacity: 1;
+ 		visibility: visible;
+ 	}
+
+ 	.team-person:hover img {
+		-webkit-filter: grayscale(0);
+				filter: grayscale(0);
+ 	} 	 	
+
+ 	.team-profile h5 {
+ 		font-size: 18px;
+ 		padding-bottom: 5px;
+ 	}
+
+ 	.team-profile .about-team-person {
+ 		margin: 10px 0;
+ 		font-size: 13px;
+ 		line-height: 22px;
+ 	}
+
+ 	ul.team-social-media {
+ 		font-size: 0;
+ 		list-style: none;
+ 	}
+
+ 	ul.team-social-media li {
+ 		display: inline-block;
+ 		font-size: 17px;
+ 		margin-right: 20px;
+ 	}
+
+ 	ul.team-social-media li a {
+ 		color: #999;
+ 	}
+
+ 	ul.team-social-media li:last-child {
+ 		margin-right: 0;
+ 	} 	
+
+/******************************/
+
+
+
+/** [ 6.8 ] - More Features Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.more-features-right-box h3 {
+		font-size: 18px;
+		line-height: 12px;
+		color: #555;
+	}
+
+	.more-features-right-box p {
+		font-size: 14px;
+		line-height: 21px;
+		color: #999;
+	}
+
+	.check-list {
+		list-style: outside none;
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+
+	.check-list li {
+		margin-bottom: 5px;
+		font-size: 14px;
+		line-height: 21px;
+		color: #999;
+	}
+
+	.check-list li i {
+		font-size: 18px;
+		margin-right: 14px;
+		position: relative;
+		top: 2px;
+		cursor: default;
+		line-height: 18px;
+	}
+
+	.more-features-right-box .featured-button {
+		margin-top: 20px;
+	}
+
+	/* more-features-slider */
+
+	#more-features .more-features-slider {
+		list-style: none;
+		overflow: hidden;
+	}
+
+	#more-features .more-features-slider li img {
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	}
+
+	.more-features-slider .owl-pagination {
+		position: absolute;
+		width: 100%;
+	}
+
+	.more-features-slider .owl-controls{
+		margin-top: 0;
+	}
+
+	/* owl page */
+
+	.more-features-slider .owl-controls .owl-page {
+	    bottom: -40px;
+	    position: relative;
+	    opacity: 0;
+		transition: all 0.4s ease 0s;	    
+	}
+
+	.more-features-slider:hover .owl-controls .owl-page {
+	    bottom: 40px;
+	    color: #f5f5f5;
+	    opacity: 1;
+	}
+
+	.more-features-slider .owl-controls .owl-page.active span {
+	    opacity: 1;
+	}
+
+	.owl-theme .owl-controls .owl-page span {
+		background-color: #f5f5f5;
+		margin: 0 4px;
+		opacity: 1;
+		transition: all 0.4s ease 0s;
+	}
+
+	/* owl buttons */
+
+	.owl-theme .owl-controls .owl-buttons div {
+		background: #f5f5f5;
+		position: absolute;
+		opacity: 1;
+		top: 50%;
+		border-radius: 0;
+		margin: auto;
+		display: block;
+		margin-top: -14px;
+		transition: all 0.2s ease;
+	}
+
+	.owl-theme .owl-controls .owl-buttons div:hover {
+		background: #f5f5f5;
+		padding: 3px 12px;
+	}
+
+	.owl-prev {
+		left: 0;
+	}
+
+	.owl-next {
+		right: 0;
+	}
+
+
+/******************************/
+
+
+
+/** [ 6.9 ] - Pricing Table Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	.plan {
+ 		position: relative;
+ 		background: #f5f5f5;
+ 		border-radius: 4px;
+ 		min-height: 100px;
+ 		padding-bottom: 25px;
+ 		text-align: center;
+ 		border: 1px solid #f0f0f0;
+ 	}
+
+	/* plan head */
+
+ 	.plan .head {
+ 		padding: 35px 20px;
+ 		background: #1c1c1c;
+ 		border-top-left-radius: 4px;
+ 		border-top-right-radius: 4px;
+ 	}
+
+ 	.plan .head h2 {
+ 		color: #fff;
+ 		padding: 0;
+ 		font-size: 25px;
+ 		line-height: 37px
+ 	}
+
+	/* plan item list */
+
+ 	.plan ul {
+ 		list-style: outside none;
+ 		padding: 30px 20px;
+ 	}
+
+ 	.plan ul li {
+	    font-size: 16px;
+	    font-weight: 400;
+	    line-height: 25px;
+	    margin-bottom: 15px;
+	}
+
+	.plan ul li:last-child {
+		margin-bottom: 0;
+	}
+
+	.plan ul li i {
+		font-size: 15px;
+		cursor: help;
+		position: absolute;
+		margin: 7px 0 0 5px;
+	}
+
+	/* plan price */
+
+	.plan .price {
+	    border-top: 1px solid #eee;
+	    margin: auto;
+	    width: 80%;
+	    padding: 20px 0 30px;
+	}
+
+	.plan .price h3 {
+		font-size: 65px;
+		line-height: 1;
+		vertical-align: top;
+	}
+
+	.plan .price h3 span {
+		display: inline-block;
+		font-size: 25px;
+		margin: 6px 0 0 -7px;
+		position: relative;
+		vertical-align: top;
+	}
+
+	.plan .price h4 {
+	    color: #aaa;
+	    font-size: 14px;
+	}
+
+	/* plan button */
+
+	.plan .featured-button {
+		margin-bottom: 20px;
+	}
+
+
+/******************************/
+
+
+
+/** [ 6.10] - Call To Action Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#call-to-action h3 {
+		font-size: 28px;
+		line-height: 42px;
+		text-transform: uppercase;
+		padding-bottom: 0;
+	}
+
+	#call-to-action h1 {
+		font-size: 45px;
+		line-height: 66px;
+		color: #fff;
+		padding-bottom: 35px;
+	}
+
+
+/******************************/
+
+
+
+/** [ 6.11] - Testmonials Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	.single-testmonial {
+		display: block;
+		position: relative;
+		padding: 35px 30px;
+		background: #F5F5F5;
+		border: 1px solid #f0f0f0;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+	
+	.flat-section-content [class*="col-"]:nth-last-child(2) .single-testmonial,
+	.flat-section-content [class*="col-"]:last-child .single-testmonial {
+		margin-bottom: 0 !important;
+	}
+
+	.single-testmonial img {
+		width: 80px;
+		height: 80px;
+		border: 5px solid #fff;
+		box-shadow: 0 4px 4px #ccc;
+		border-radius: 50%;
+	}
+
+	.person-image {
+		position: absolute;
+		display: inline-block;
+	}
+
+	.single-testmonial i {
+		font-size: 14px;
+		color: #fff;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		position: absolute;
+		bottom: 0;
+		left: -4px;
+		border-radius: 50%;
+		text-align: center;
+		cursor: default;
+		transition: all 0.5s ease;
+	}
+
+	.single-testmonial:hover i {
+		-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+	}
+
+	.single-testmonial p {
+		padding-bottom: 10px;
+	}
+
+	.single-testmonial h5 {
+		font-size: 14px;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 700;
+		padding: 10px 0 0;
+	}
+
+	.single-testmonial h5 span{
+		font-size: 12px;
+		color: #777;
+		font-style: italic;
+	}
+
+	.single-testmonial p,
+	.single-testmonial h5 {
+		margin-left: 110px;
+	}
+
+
+/******************************/
+
+
+
+/** [ 6.12] - Contact us Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ 	#contact-us {
+ 		border-top: 1px solid #eee;
+ 	}
+
+	
+/******************************/
+
+
+
+
+/** [ 6.13] - Map Section
+ *	~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#map-section {
+		height: 400px;
+		padding: 0 !important;
+	}
+
+	#map-section #map {
+		height: 100%;
+	}
+
+	
+/******************************/
+
+
+
+
+/** [ 6.14] - Instagram Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	#instagram-feed {
+		padding: 0;
+	}
+
+	#instafeed {
+		list-style: none;
+		font-size: 0;
+	}
+
+	#instafeed li {
+		-webkit-filter: grayscale(1);
+				filter: grayscale(1);
+	    transition: all 0.2s linear 0s;
+	}
+
+	#instafeed li:hover {
+		-webkit-filter: grayscale(0);
+				filter: grayscale(0);	
+	}
+
+	#instagram-feed .owl-theme .owl-controls {
+		margin-top: 0;
+	}
+
+	#instagram-feed .icon-overlay {
+		height: 100%;
+		background: #000;
+		width: 100%;
+		position: absolute;
+		opacity: 0;
+		transition: all 0.5s;
+	}
+
+	#instagram-feed li:hover .icon-overlay  {
+		opacity: 0.5;
+	}
+
+	#instagram-feed .icon-overlay i {
+		opacity: 1;
+	    font-size: 28px;
+	    left: 50%;
+	    margin-left: -12px;
+	    margin-top: -14px;
+	    position: absolute;
+	    top: 50%;
+	}
+
+/******************************/
+
+
+
+/** [ 6.15] - Footer Section
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+	footer {
+		text-align: left;
+		position: relative;
+		background-color: #1f1f1f;
+		background-image: url(../images/files/footer/footer-bg.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.main-footer {
+		position: relative;
+		width: 100%;
+		padding: 80px 0;
+		border-bottom: 1px solid #1c1c1c;
+	}
+
+	.footer-box {
+		position: relative;
+		width: 100%;
+	}
+
+	.footer-box h3 {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 27px;
+		padding-bottom: 30px;
+		text-transform: uppercase;
+	}
+
+	.footer-box p {
+		font-size: 14px;
+		line-height: 21px;
+		color: #999;
+	}
+
+	.footer-box a.read-more {
+		margin-top: 20px;
+		color: #999;
+		font-size: 12px;
+		font-weight: 400;
+		font-family: "montserrat", sans-serif;
+		line-height: 18px;
+		display: inline-block;
+		text-decoration: underline;
+		text-transform: uppercase;
+	}
+
+	/* contact info */
+
+	ul.contact-info {
+		list-style: outside none;
+		display: block;
+	}
+
+	ul.contact-info li {
+		padding-bottom: 5px;
+		display: block;
+		font-size: 14px;
+		color: #999;
+	}
+
+	ul.contact-info li:last-child {
+		padding-bottom: 0;
+	}
+
+	ul.contact-info li i {
+	    font-size: 16px;
+	    height: 16px;
+	    line-height: 16px;
+	    margin-right: 15px;
+	    width: 16px;
+	    text-align: center;
+	}
+
+	ul.contact-info li span {
+	    display: inline-block;
+	    font-size: 14px;
+		font-family: "montserrat", sans-serif;
+	    line-height: 21px;
+	    font-weight: 400;
+	    width: 90px;
+	}
+
+	ul.contact-info li a {
+		font-size: 14px;
+		color: #999;
+	}
+
+	/* sub-footer */
+
+	footer .sub-footer {
+		background: #1f1f1f;
+		border-top: 1px solid #232323;
+		min-height: 65px;
+	}
+
+	.sub-footer .social-icons {
+		text-align: center;
+		font-size: 0;
+		display: inline-block;
+		margin-top: 8px;
+		right: 0;
+		position: absolute;
+	}
+
+	.sub-footer .social-icons li,
+	.sub-footer .social-icons li:first-child {
+		border: none;
+	}
+
+	.sub-footer .social-icons li a i {
+		width: 40px;
+	}
+
+	.footer-content {
+		border-top: 1px solid #f0f0f0;
+		padding: 65px 0;
+	}
+
+	.copyright-message {
+		display: block;
+		float: left;
+		margin-top: 22px;
+		color: #999;
+		font-weight: 600;
+		font-size: 12px;
+	}
+
+	.copyright-message strong {
+		color: #999;
+	}
+
+/******************************/
+
+
+
+/*	-------------------------------------------------------------------------------
+ *	[ 7 ] - Media Queries
+ *	-------------------------------------------------------------------------------
+ *  
+ *  This part contains the all changes that needed for elements for the Bootsrap
+ *  widths like iPhone image in About Us section
+ *  
+ *  It's divided to the following sections:
+ *  
+ *	   |
+ *	   |-->  [ 7.1 ] - Width between 1200px to 0
+ *	   |-->  [ 7.2 ] - Width between 992px to 0
+ *	   |-->  [ 7.3 ] - Width between 768px to 0
+ *	   |-->  [ 7.4 ] - Width between 480px to 0
+ *  
+*/
+
+/** [ 7.1 ] - Width between 1200px to 0 
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 1200px) {
+
+	.team-person .team-profile {
+		left: 0;
+		right: 0;
+	}
+}
+
+/** [ 7.2 ] - Width between 992px to 0 
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 992px) {
+
+	.nav-trigger {
+    	display: block;
+    }
+
+  	nav .main-menu {
+    	display: none; 
+    }
+
+  	.nav-mobile {
+    	display: block; 
+    }
+
+	.clients li {
+		text-align: center;
+	}
+
+	.info-box-2 {
+		margin-bottom: 35px;
+	}
+
+	#what-we-do-info [class*="col-"]:last-child .info-box-2 {
+		margin-bottom: 0;
+	}
+
+ 	ul.portfolio-filter li {
+		display: block;
+		margin: 5px 60px;
+	}
+
+	ul.portfolio-filter li:last-child {
+		margin: 5px 60px;
+	}
+
+	#video p {
+		width: 100%;
+	}
+
+	.header-featured-content {
+		height: auto;
+	}
+
+	.header-featured-inner-content {
+		text-align: center !important;
+	}
+
+	#header-featured-form {
+		position: relative;
+		top: 0;
+		margin: 25px auto 50px;
+	}
+
+	.flat-section-title p {
+		width: 100%;
+	}
+
+	#our-features .clearfix{
+		display: none;
+	}
+
+	.more-features-slider {
+		padding-bottom: 35px;	
+	}
+
+	.plan {
+		margin-bottom: 50px;
+	}
+
+	#pricing-table [class*="col-"]:last-child .plan {
+		margin-bottom: 0;
+	}
+
+	.footer-box {
+		margin-bottom: 45px;
+	}
+	.footer-box h3 {
+		padding-bottom: 20px;
+	}
+
+	#footer [class*="col-"]:last-child .footer-box,
+	#footer [class*="col-"]:nth-last-child(2) .footer-box {
+		margin-bottom: 0;
+	}
+
+	.header-parallax, .parallax-section {
+		background-position: center top !important;
+		background-attachment: scroll !important;
+	}
+
+}
+
+
+/** [ 7.3 ] - Width between 768px to 0 
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 768px) {
+
+	.subnav-social .Languages {
+		top: 13px;
+	}
+
+	#footer [class*="col-"]:nth-last-child(2) .footer-box {
+		margin-bottom: 45px;
+	}
+
+	.flat-section-content [class*="col-"]:nth-last-child(2) .single-testmonial {
+		margin-bottom: 30px !important;
+	}
+
+	.team-person {
+		margin-bottom: 50px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.flat-section-content [class*="col-"]:last-child .team-person {
+		margin-bottom: 0;
+		border-bottom: none;
+	}	
+
+}
+
+
+/** [ 7.4 ] - Width between 480px to 0 
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 480px) {
+
+	.Languages {
+		text-align: center;
+	}
+
+	.subnav-contact {
+		display: none;
+	}
+
+	.sub-nav .container .row [class*="col-"]:first-child {
+		display: none;
+	}
+
+	.sub-nav .container .row [class*="col-"]:last-child {
+		width: 100%;
+	}
+
+	.subnav-social {
+		text-align: center;
+	}
+
+	.subscribe-result {
+		max-width: 100%;
+	}
+
+	#header-featured-form {
+		height: 615px;
+		width: 290px;
+	}
+
+	#contact-form {
+		padding-top: 20px;
+	}
+
+	.contact-form small {
+		display: none;
+	}
+
+	form textarea {
+		height: 110px;
+	}
+
+	#header-featured-form i {
+		margin-top: 80px;
+	}
+
+	.contact-form-container {
+		left: 14px;
+		top: 67px;
+		height: 470px;
+		width: 263px;
+		padding: 25px 15px;
+	}
+
+	.contact-form-title h4 {
+		font-size: 20px;
+	}
+
+	.contact-form-container .contact-form-title span {
+		font-size: 12px;
+	}
+
+	#contact-form .form-group {
+		padding-bottom: 15px;
+	}
+
+	#msgSubmit {
+		width: 300px;
+	}
+
+	.single-testmonial {
+		text-align: center;
+	}
+
+	.person-image {
+		position: relative;
+		margin-bottom: 25px;
+	}
+
+	.single-testmonial p, .single-testmonial h5 {
+		margin-left: 0;
+	}
+
+	#testmonials .col-xs-12:last-child .single-testmonial {
+		margin-bottom: 0;
+	}
+
+	.copyright-message {
+		float: none;
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	.sub-footer .social-icons {
+		display: block;
+		margin-top: 16px;
+		margin-bottom: 30px;
+		position: relative;
+
+	}
+
+}
+
